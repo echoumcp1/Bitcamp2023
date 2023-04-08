@@ -17,7 +17,7 @@ const openai = new OpenAIApi(configuration);
 
 const response = async ()=> {
     const result = await openai.createCompletion({
-      model: "ada:ft-personal-2023-04-08-08-48-58",
+      model: "ada:ft-personal-2023-04-08-10-41-54",
       prompt: "University of Maryland\n\n###\n\n",
       temperature: 0,
       max_tokens: 20,

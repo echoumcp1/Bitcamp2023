@@ -1,0 +1,79 @@
+.Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 98vh;
+  }
+.background {
+    text-align: center;
+    background-color: rgb(250, 244, 236);
+    font-size: 20px;
+    line-height: 8px;
+    padding: 20px;
+  }
+  
+  input[type="number"] {
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    font-size: 17px;
+    border: none;
+    box-shadow: 0 0px 2px rgba(0,0,0, 0.4);
+  }
+  
+  #dependants {
+    width: 50px;
+  }
+  
+  #csv-file {
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  #csv-file::file-selector-button {
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 17px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0px 2px rgba(0,0,0, 0.4);
+    margin: 10px;
+  }
+  
+ #submit{
+    border-radius: 7px;
+    border: none;
+    padding: 7px;
+    font-size: 17px;
+    background-color: white;
+    transform: translateY(-4px);
+  }
+  
+  #submit:active {
+    transform: translateY(-2px);
+  }
+  
+  .front {
+    background-color: rgb(100, 100, 100);
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0, 0.4);
+  }
+  
+  #school {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #school div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+  }
+
+  #csvError {
+    color: red;
+    font-size: 14px;
+  }
