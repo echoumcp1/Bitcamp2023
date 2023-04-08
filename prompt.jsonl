@@ -1,0 +1,627 @@
+{"prompt":"Abilene Christian University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Appalachian Bible College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Bard College at Simon's Rock\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Bloomfield College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"California Maritime Academy\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Central Bible College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Cogswell Polytechnical College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Concordia University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Davis College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"ECPI University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Florida Institute of Technology\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Gonzaga University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Heritage University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Inter American University of Puerto Rico--Arecibo\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Keystone College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Lindsey Wilson College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Martin Luther College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"MidAmerica Nazarene University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Morgan State University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Newbury College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Oglethorpe University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Pennsylvania State University--Harrisburg\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Rensselaer Polytechnic Institute\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"San Diego Christian College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"South University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"St. Francis University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Sul Ross State University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"The Catholic University of America\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Universidad Adventista de las Antillas\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"University of Denver\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"University of Medicine and Dentistry of New Jersey\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"University of Oregon\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"University of Tennessee--Chattanooga\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"University of Wisconsin--Stout\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Washington State University\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Whittier College\nSupported: ", "completion":"Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Mortgage Interest Payment\nSupport: ", "completion":"Yes,Deduction,Mortgage Interest Payments\n" }
+{"prompt":"Housing Mortgage Interest Payment\nSupport: ", "completion":"Yes,Deduction,Mortgage Interest Payments\n" }
+{"prompt":"Fixed Rate Mortgage Interest Payment\nSupport: ", "completion":"Yes,Deduction,Mortgage Interest Payments\n" }
+{"prompt":"Housing Mortgage Interest Payment\nSupport: ", "completion":"Yes,Deduction,Mortgage Interest Payments\n" }
+{"prompt":"Fixed Rate Mortgage Interest Payment\nSupport: ", "completion":"Yes,Deduction,Mortgage Interest Payments\n" }
+{"prompt":"State Taxes\nSupport ", "completion": "Yes,Deduction,State Taxes You Paid"}
+{"prompt":"Local Taxes\nSupport ", "completion": "Yes,Deduction,Local Taxes You Paid"}
+{"prompt":"City Taxes\nSupport ", "completion": "Yes,Deduction,Local Taxes You Paid"}
+{"prompt":"Local Taxes\nSupport ", "completion": "Yes,Deduction,Local Taxes You Paid"}
+{"prompt":"State Real Estate Taxes\nSupport ", "completion": "Yes,Deduction,State Taxes You Paid"}
+{"prompt":"Local Real Estate Taxes\nSupport ", "completion": "Yes,Deduction,State Taxes You Paid"}
+{"prompt": "ACMH Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Adventist Health - Bakersfield\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Anderson Regional Medical Center - North\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Ascension St John Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Aurelia Osborn Fox Memorial Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Baptist Health Lexington\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Baylor Scott & White Medical Center - McKinney\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Blessing Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "CHA Cambridge Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "California Pacific Medical Center - Davies Campus\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Cayuga Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "ChristianaCare - Union Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Community Hospital Anderson\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Danbury Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Dyersburg Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Essentia Health - Fargo\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Franciscan Health Lafayette East\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Good Samaritan Hospital of Cincinnati\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "HCA Florida Mercy Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Hackensack Meridian Mountainside Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Heywood Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Huntington Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Iredell Memorial Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Jordan Valley Medical Center, West Valley Campus\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Kern Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "LeConte Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Los Robles Regional Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Margaret R. Pardee Memorial Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "McLeod Health Cheraw\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Memorial Hermann Memorial City Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Mercy Hospital - Downtown\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Methodist Hospitals - Northlake Campus\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Monroe County Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Munson Healthcare Grayling Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "New York-Presbyterian, Lower Manhattan Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Northern Light Maine Coast Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "OCH Regional Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Orlando Health South Lake Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Parkview DeKalb Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Piedmont Newnan Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Providence Little Company of Mary Medical Center San Pedro\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Riverside Doctors' Hospital Williamsburg\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "SSM Health St. Mary's Hospital - Madison\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Samaritan Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Sentara Virginia Beach General Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Southampton Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "St Peter's Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "St. John's Regional Medical Center of Oxnard\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "St. Margaret's Health - Spring Valley\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Suburban Community Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Tennova Newport Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Three Rivers Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "UCHealth Broomfield Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "UPMC ST MARGARET\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "University Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Upper Valley Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Watauga Medical Center\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Wilcox Memorial Hospital\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Comptroller\nSupport:", "compeletion": "Yes,Deduction,State Taxes You Paid"}
+{"prompt":"Alaska
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Alabama
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Arkansas
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"American Samoa
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Arizona
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"California
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Colorado
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Connecticut
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"District of Columbia
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Delaware
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Florida
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Georgia
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Hawaii
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Iowa
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Idaho
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Illinois
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Indiana
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Kansas
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Kentucky
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Louisiana
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Massachusetts
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Maryland
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Maine
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Michigan
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Minnesota
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Missouri
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Mississippi
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Montana
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"North Carolina
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"North Dakota
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Nebraska
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"New Hampshire
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"New Jersey
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"New Mexico
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Nevada
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"New York
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Ohio
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Oklahoma
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Oregon
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Pennsylvania
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Puerto Rico
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Rhode Island
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"South Carolina
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"South Dakota
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Tennessee
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Texas
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Utah
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Virginia
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Virgin Islands
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Vermont
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Washington
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Wisconsin
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"West Virginia
+\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Wyoming\nSupported: ", "completion":"Yes,Credit,State Taxes You Paid\n"}
+{"prompt": "Atorvastatin Calcium RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Mirtazapine RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Temazepam RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Ketoconazole RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Labetalol Hcl RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Ipratropium-Albuterol RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Methylphenidate Hcl RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Medroxyprogesterone Acetate RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Lotemax RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Proventil Hfa RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Enalapril-Hydrochlorothiazide RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Prolia RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Dronabinol RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Asacol Hd RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Flunisolide RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Diclofenac Sodium-Misoprostol RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Gilenya RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Darifenacin Er RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Hydromorphone Er RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Androderm RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Percocet RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Prograf RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Jinteli RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Methscopolamine Bromide RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Leukeran RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Insupen RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Fluoxetine Dr RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Uptravi RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Synjardy RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Stromectol RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Clobex RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Cortisporin RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Cancidas RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Dobutamine Hcl In Dextrose RX\nSupport:", "completion": "Yes,Deduction,Medical"}
+{"prompt": "Chick-fil-A\nSupport:", "completion": "No"}
+{"prompt": "McDonald's\nSupport:", "completion": "No"}
+{"prompt": "Starbucks\nSupport:", "completion": "No"}
+{"prompt": "Subway\nSupport:", "completion": "No"}
+{"prompt": "Taco Bell\nSupport:", "completion": "No"}
+{"prompt": "Wendy's\nSupport:", "completion": "No"}
+{"prompt": "Burger King\nSupport:", "completion": "No"}
+{"prompt": "Domino's Pizza\nSupport:", "completion": "No"}
+{"prompt": "KFC\nSupport:", "completion": "No"}
+{"prompt": "Pizza Hut\nSupport:", "completion": "No"}
+{"prompt": "Panera Bread\nSupport:", "completion": "No"}
+{"prompt": "Chipotle Mexican Grill\nSupport:", "completion": "No"}
+{"prompt": "Dunkin'\nSupport:", "completion": "No"}
+{"prompt": "Jimmy John's\nSupport:", "completion": "No"}
+{"prompt": "Five Guys\nSupport:", "completion": "No"}
+{"prompt": "Panda Express\nSupport:", "completion": "No"}
+{"prompt": "Olive Garden\nSupport:", "completion": "No"}
+{"prompt": "Outback Steakhouse\nSupport:", "completion": "No"}
+{"prompt": "Red Lobster\nSupport:", "completion": "No"}
+{"prompt": "Applebee's\nSupport:", "completion": "No"}
+{"prompt": "Cheesecake Factory\nSupport:", "completion": "No"}
+{"prompt": "Denny's\nSupport:", "completion": "No"}
+{"prompt": "IHOP\nSupport:", "completion": "No"}
+{"prompt": "TGI Fridays\nSupport:", "completion": "No"}
+{"prompt": "Texas Roadhouse\nSupport:", "completion": "No"}
+{"prompt": "Cracker Barrel\nSupport:", "completion": "No"}
+{"prompt": "Buffalo Wild Wings\nSupport:", "completion": "No"}
+{"prompt": "P.F. Chang's\nSupport:", "completion": "No"}
+{"prompt": "LongHorn Steakhouse\nSupport:", "completion": "No"}
+{"prompt": "Ruth's Chris Steak House\nSupport:", "completion": "No"}
+{"prompt": "Carrabba's Italian Grill\nSupport:", "completion": "No"}
+{"prompt": "Benihana\nSupport:", "completion": "No"}
+{"prompt": "Shake Shack\nSupport:", "completion": "No"}
+{"prompt": "The Capital Grille\nSupport:", "completion": "No"}
+{"prompt": "Morton's The Steakhouse\nSupport:", "completion": "No"}
+{"prompt": "Fogo de ChÃ£o\nSupport:", "completion": "No"}
+{"prompt": "Maggiano's Little Italy\nSupport:", "completion": "No"}
+{"prompt": "Buca di Beppo\nSupport:", "completion": "No"}
+{"prompt": "The Melting Pot\nSupport:", "completion": "No"}
+{"prompt": "Del Frisco's Double Eagle Steakhouse\nSupport:", "completion": "No"}
+{"prompt": "The Cheesesteak Shop\nSupport:", "completion": "No"}
+{"prompt": "Shakey's Pizza Parlor\nSupport:", "completion": "No"}
+{"prompt": "Blaze Pizza\nSupport:", "completion": "No"}
+{"prompt": "Mellow Mushroom\nSupport:", "completion": "No"}
+{"prompt": "Bertucci's\nSupport:", "completion": "No"}
+{"prompt": "California Pizza Kitchen\nSupport:", "completion": "No"}
+{"prompt": "Sbarro\nSupport:", "completion": "No"}
+{"prompt": "Little Caesars\nSupport:", "completion": "No"}
+{"prompt": "CiCi's Pizza\nSupport:", "completion": "No"}
+{"prompt": "Jersey Mike's Subs\nSupport:", "completion": "No"}
+{"prompt": "Firehouse Subs\nSupport:", "completion": "No"}
+{"prompt": "Potbelly Sandwich Shop\nSupport:", "completion": "No"}
+{"prompt": "Schlotzsky's\nSupport:", "completion": "No"}
+{"prompt": "Quiznos\nSupport:", "completion": "No"}
+{"prompt": "Which Wich\nSupport:", "completion": "No"}
+{"prompt": "Boston Market\nSupport:", "completion": "No"}
+{"prompt": "El Pollo Loco\nSupport:", "completion": "No"}
+{"prompt": "Wingstop\nSupport:", "completion": "No"}
+{"prompt": "Hooters\nSupport:", "completion": "No"}
+{"prompt": "Dave & Buster's\nSupport:", "completion": "No"}
+{"prompt": "Bubba Gump Shrimp Co.\nSupport:", "completion": "No"}
+{"prompt": "Joe's Crab Shack\nSupport:", "completion": "No"}
+{"prompt": "Red Robin\nSupport:", "completion": "No"}
+{"prompt": "Smashburger\nSupport:", "completion": "No"}
+{"prompt": "Freddy's Frozen Custard & Steakburgers\nSupport:", "completion": "No"}
+{"prompt": "In-N-Out Burger\nSupport:", "completion": "No"}
+{"prompt": "Culver's\nSupport:", "completion": "No"}
+{"prompt": "Whataburger\nSupport:", "completion": "No"}
+{"prompt": "Carl's Jr.\nSupport:", "completion": "No"}
+{"prompt": "Hardee's\nSupport:", "completion": "No"}
+{"prompt": "Bojangles'\nSupport:", "completion": "No"}
+{"prompt": "Zaxby's\nSupport:", "completion": "No"}
+{"prompt": "Raising Cane's Chicken Fingers\nSupport:", "completion": "No"}
+{"prompt": "Church's Chicken\nSupport:", "completion": "No"}
+{"prompt": "Captain D's\nSupport:", "completion": "No"}
+{"prompt": "White Castle\nSupport:", "completion": "No"}
+{"prompt": "Checkers/Rally's\nSupport:", "completion": "No"}
+{"prompt": "Fatburger\nSupport:", "completion": "No"}
+{"prompt": "Johnny Rockets\nSupport:", "completion": "No"}
+{"prompt": "Fuddruckers\nSupport:", "completion": "No"}
+{"prompt": "Hard Rock Cafe\nSupport:", "completion": "No"}
+{"prompt": "Rainforest Cafe\nSupport:", "completion": "No"}
+{"prompt": "Joe's Pizza\nSupport:", "completion": "No"}
+{"prompt": "Giordano's\nSupport:", "completion": "No"}
+{"prompt": "Lou Malnati's Pizzeria\nSupport:", "completion": "No"}
+{"prompt": "Balthazar\nSupport:", "completion": "No"}
+{"prompt": "Nobu\nSupport:", "completion": "No"}
+{"prompt": "Per Se\nSupport:", "completion": "No"}
+{"prompt": "Peter Luger Steak House\nSupport:", "completion": "No"}
+{"prompt": "Momofuku Ko\nSupport:", "completion": "No"}
+{"prompt": "Eleven Madison Park\nSupport:", "completion": "No"}
+{"prompt": "Alinea\nSupport:", "completion": "No"}
+{"prompt": "French Laundry\nSupport:", "completion": "No"}
+{"prompt": "Le Bernardin\nSupport:", "completion": "No"}
+{"prompt": "Spago\nSupport:", "completion": "No"}
+{"prompt": "Nobu Matsuhisa\nSupport:", "completion": "No"}
+{"prompt": "Daniel\nSupport:", "completion": "No"}
+{"prompt": "Blue Hill at Stone Barns\nSupport:", "completion": "No"}
+{"prompt": "Gramercy Tavern\nSupport:", "completion": "No"}
+{"prompt": "Union Square Cafe\nSupport:", "completion": "No"}
+{"prompt": "PayPal \nSupported", "completion": "No"}
+{"prompt": "Venmo \nSupported", "completion": "No"}
+{"prompt": "Cash App \nSupported", "completion": "No"}
+{"prompt": "Zelle \nSupported", "completion": "No"}
+{"prompt": "Google Pay \nSupported", "completion": "No"}
+{"prompt": "Apple Pay \nSupported", "completion": "No"}
+{"prompt": "Stripe \nSupported", "completion": "No"}
+{"prompt": "Square \nSupported", "completion": "No"}
+{"prompt": "Skrill \nSupported", "completion": "No"}
+{"prompt": "TransferWise \nSupported", "completion": "No"}
+{"prompt": "Walmart \nSupported", "completion": "No"}
+{"prompt": "Target \nSupported", "completion": "No"}
+{"prompt": "Costco \nSupported", "completion": "No"}
+{"prompt": "Home Depot \nSupported", "completion": "No"}
+{"prompt": "Lowe's \nSupported", "completion": "No"}
+{"prompt": "Best Buy \nSupported", "completion": "No"}
+{"prompt": "Macy's \nSupported", "completion": "No"}
+{"prompt": "Kohl's \nSupported", "completion": "No"}
+{"prompt": "J.C. Penney \nSupported", "completion": "No"}
+{"prompt": "Sears \nSupported", "completion": "No"}
+{"prompt": "Nordstrom \nSupported", "completion": "No"}
+{"prompt": "Neiman Marcus \nSupported", "completion": "No"}
+{"prompt": "Bloomingdale's \nSupported", "completion": "No"}
+{"prompt": "Saks Fifth Avenue \nSupported", "completion": "No"}
+{"prompt": "Gap \nSupported", "completion": "No"}
+{"prompt": "Old Navy \nSupported", "completion": "No"}
+{"prompt": "Banana Republic \nSupported", "completion": "No"}
+{"prompt": "H&M \nSupported", "completion": "No"}
+{"prompt": "Forever 21 \nSupported", "completion": "No"}
+{"prompt": "Zara \nSupported", "completion": "No"}
+{"prompt": "Nike \nSupported", "completion": "No"}
+{"prompt": "Adidas \nSupported", "completion": "No"}
+{"prompt": "Reebok \nSupported", "completion": "No"}
+{"prompt": "Foot Locker \nSupported", "completion": "No"}
+{"prompt": "Dick's Sporting Goods \nSupported", "completion": "No"}
+{"prompt": "Bass Pro Shops \nSupported", "completion": "No"}
+{"prompt": "Cabela's \nSupported", "completion": "No"}
+{"prompt": "Petco \nSupported", "completion": "No"}
+{"prompt": "PetSmart \nSupported", "completion": "No"}
+{"prompt": "Barnes & Noble \nSupported", "completion": "No"}
+{"prompt": "Books-A-Million \nSupported", "completion": "No"}
+{"prompt": "GameStop \nSupported", "completion": "No"}
+{"prompt": "Michaels \nSupported", "completion": "No"}
+{"prompt": "Jo-Ann Fabric and Craft Stores \nSupported", "completion": "No"}
+{"prompt": "Hobby Lobby \nSupported", "completion": "No"}
+{"prompt": "Dollar General \nSupported", "completion": "No"}
+{"prompt": "Family Dollar \nSupported", "completion": "No"}
+{"prompt": "Dollar Tree \nSupported", "completion": "No"}
+{"prompt": "7-Eleven \nSupported", "completion": "No"}
+{"prompt": "Circle K \nSupported", "completion": "No"}
+{"prompt": "QuikTrip \nSupported", "completion": "No"}
+{"prompt": "Wawa \nSupported", "completion": "No"}
+{"prompt": "Sheetz \nSupported", "completion": "No"}
+{"prompt": "Speedway \nSupported", "completion": "No"}
+{"prompt": "CVS \nSupported", "completion": "No"}
+{"prompt": "Walgreens \nSupported", "completion": "No"}
+{"prompt": "Rite Aid \nSupported", "completion": "No"}
+{"prompt": "99 Cents Only Stores \nSupported", "completion": "No"}
+{"prompt": "Five Below \nSupported", "completion": "No"}
+{"prompt": "Party City \nSupported", "completion": "No"}
+{"prompt": "Spencer's \nSupported", "completion": "No"}
+{"prompt": "Bed Bath & Beyond \nSupported", "completion": "No"}
+{"prompt": "Williams-Sonoma \nSupported", "completion": "No"}
+{"prompt": "Pottery Barn \nSupported", "completion": "No"}
+{"prompt": "Crate & Barrel \nSupported", "completion": "No"}
+{"prompt": "Pier 1 Imports \nSupported", "completion": "No"}
+{"prompt": "IKEA \nSupported", "completion": "No"}
+{"prompt": "Anthropologie \nSupported", "completion": "No"}
+{"prompt": "Urban Outfitters \nSupported", "completion": "No"}
+{"prompt": "American Eagle Outfitters \nSupported", "completion": "No"}
+{"prompt": "Abercrombie & Fitch \nSupported", "completion": "No"}
+{"prompt": "Hollister \nSupported", "completion": "No"}
+{"prompt": "Victoria's Secret \nSupported", "completion": "No"}
+{"prompt": "Bath & Body Works \nSupported", "completion": "No"}
+{"prompt": "The Body Shop \nSupported", "completion": "No"}
+{"prompt": "Sephora \nSupported", "completion": "No"}
+{"prompt": "Ulta Beauty \nSupported", "completion": "No"}
+{"prompt": "MAC Cosmetics \nSupported", "completion": "No"}
+{"prompt": "Lush \nSupported", "completion": "No"}
+{"prompt": "Sunglass Hut \nSupported", "completion": "No"}
+{"prompt": "LensCrafters \nSupported", "completion": "No"}
+{"prompt": "Warby Parker \nSupported", "completion": "No"}
+{"prompt": "T-Mobile \nSupported", "completion": "No"}
+{"prompt": "Verizon \nSupported", "completion": "No"}
+{"prompt": "AT&T \nSupported", "completion": "No"}
+{"prompt": "Sprint \nSupported", "completion": "No"}
+{"prompt": "The Apple Store \nSupported", "completion": "No"}
+{"prompt": "Microsoft Store \nSupported", "completion": "No"}
+{"prompt": "Google Store \nSupported", "completion": "No"}
+{"prompt": "Tesla \nSupported", "completion": "No"}
+{"prompt": "BMW \nSupported", "completion": "No"}
+{"prompt": "Mercedes-Benz \nSupported", "completion": "No"}
+{"prompt": "Audi \nSupported", "completion": "No"}
+{"prompt": "Porsche \nSupported", "completion": "No"}
+{"prompt": "Ford \nSupported", "completion": "No"}
+{"prompt": "Chevrolet \nSupported", "completion": "No"}
+{"prompt": "Toyota \nSupported", "completion": "No"}
+{"prompt": "Honda \nSupported", "completion": "No"}
+{"prompt": "Nissan \nSupported", "completion": "No"}
+{"prompt": "Mitsubishi \nSupported", "completion": "No"}
+{"prompt": "Kia \nSupported", "completion": "No"}
+{"prompt": "Hyundai \nSupported", "completion": "No"}
+{"prompt": "Tesla \nSupported", "completion": "No"}
+{"prompt": "Subaru \nSupported", "completion": "No"}
+{"prompt": "Volvo \nSupported", "completion": "No"}
+{"prompt": "Mazda \nSupported", "completion": "No"}
+{"prompt": "Lexus \nSupported", "completion": "No"}
+{"prompt": "Acura \nSupported", "completion": "No"}
+{"prompt": "Infiniti \nSupported", "completion": "No"}
+{"prompt": "Jeep \nSupported", "completion": "No"}
+{"prompt": "Walmart Supercenter\nSupport:", "completion": "No"}
+{"prompt": "Kroger\nSupport:", "completion": "No"}
+{"prompt": "Albertsons\nSupport:", "completion": "No"}
+{"prompt": "Safeway\nSupport:", "completion": "No"}
+{"prompt": "Publix\nSupport:", "completion": "No"}
+{"prompt": "H-E-B\nSupport:", "completion": "No"}
+{"prompt": "Wegmans\nSupport:", "completion": "No"}
+{"prompt": "Whole Foods Market\nSupport:", "completion": "No"}
+{"prompt": "Trader Joe's\nSupport:", "completion": "No"}
+{"prompt": "Aldi\nSupport:", "completion": "No"}
+{"prompt": "Meijer\nSupport:", "completion": "No"}
+{"prompt": "Giant Eagle\nSupport:", "completion": "No"}
+{"prompt": "Hy-Vee\nSupport:", "completion": "No"}
+{"prompt": "ShopRite\nSupport:", "completion": "No"}
+{"prompt": "Giant Food\nSupport:", "completion": "No"}
+{"prompt": "Harris Teeter\nSupport:", "completion": "No"}
+{"prompt": "Food Lion\nSupport:", "completion": "No"}
+{"prompt": "Ralphs\nSupport:", "completion": "No"}
+{"prompt": "Fry's Food Stores\nSupport:", "completion": "No"}
+{"prompt": "WinCo Foods\nSupport:", "completion": "No"}
+{"prompt": "Stop & Shop\nSupport:", "completion": "No"}
+{"prompt": "Acme Markets\nSupport:", "completion": "No"}
+{"prompt": "Shaw's\nSupport:", "completion": "No"}
+{"prompt": "Price Chopper\nSupport:", "completion": "No"}
+{"prompt": "Weis Markets\nSupport:", "completion": "No"}
+{"prompt": "Tops Markets\nSupport:", "completion": "No"}
+{"prompt": "Piggly Wiggly\nSupport:", "completion": "No"}
+{"prompt": "Schnucks\nSupport:", "completion": "No"}
+{"prompt": "The Fresh Market\nSupport:", "completion": "No"}
+{"prompt": "Sprouts Farmers Market\nSupport:", "completion": "No"}
+{"prompt": "Market Basket\nSupport:", "completion": "No"}
+{"prompt": "Buehler's Fresh Foods\nSupport:", "completion": "No"}
+{"prompt": "Dierbergs\nSupport:", "completion": "No"}
+{"prompt": "Woodman's Market\nSupport:", "completion": "No"}
+{"prompt": "SpartanNash\nSupport:", "completion": "No"}
+{"prompt": "Festival Foods\nSupport:", "completion": "No"}
+{"prompt": "Food 4 Less\nSupport:", "completion": "No"}
+{"prompt": "Foods Co.\nSupport:", "completion": "No"}
+{"prompt": "QFC\nSupport:", "completion": "No"}
+{"prompt": "Fred Meyer\nSupport:", "completion": "No"}
+{"prompt": "King Soopers\nSupport:", "completion": "No"}
+{"prompt": "City Market\nSupport:", "completion": "No"}
+{"prompt": "Safeway Marketplace\nSupport:", "completion": "No"}
+{"prompt": "Bashas'\nSupport:", "completion": "No"}
+{"prompt": "Fresh Thyme Farmers Market\nSupport:", "completion": "No"}
+{"prompt": "Earth Fare\nSupport:", "completion": "No"}
+{"prompt": "Natural Grocers\nSupport:", "completion": "No"}
+{"prompt": "Sprouts Farmers Market\nSupport:", "completion": "No"}
+{"prompt": "Lucky\nSupport:", "completion": "No"}
+{"prompt": "Smart & Final\nSupport:", "completion": "No"}
+{"prompt": "PriceRite\nSupport:", "completion": "No"}
+{"prompt": "Save-A-Lot\nSupport:", "completion": "No"}
+{"prompt": "Food Basics\nSupport:", "completion": "No"}
+{"prompt": "Giant Food Stores\nSupport:", "completion": "No"}
+{"prompt": "Hannaford\nSupport:", "completion": "No"}
+{"prompt": "Shaw's Supermarkets\nSupport:", "completion": "No"}
+{"prompt": "Market 32\nSupport:", "completion": "No"}
+{"prompt": "Price Cutter\nSupport:", "completion": "No"}
+{"prompt": "Reasor's\nSupport:", "completion": "No"}
+{"prompt": "Wawa\nSupport:", "completion": "No"}
+{"prompt": "Casey's General Stores\nSupport:", "completion": "No"}
+{"prompt": "QuikTrip\nSupport:", "completion": "No"}
+{"prompt": "Kwik Trip\nSupport:", "completion": "No"}
+{"prompt": "Sheetz\nSupport:", "completion": "No"}
+{"prompt": "Love's Travel Stops & Country Stores\nSupport:", "completion": "No"}
+{"prompt": "Circle K\nSupport:", "completion": "No"}
+{"prompt": "7-Eleven\nSupport:", "completion": "No"}
+{"prompt": "Raley's\nSupport:", "completion": "No"}
+{"prompt": "FoodMaxx\nSupport:", "completion": "No"}
+{"prompt": "WinCo Foods\nSupport:", "completion": "No"}
+{"prompt": "Stater Bros.\nSupport:", "completion": "No"}
+{"prompt": "Vallarta Supermarkets\nSupport:", "completion": "No"}
+{"prompt": "El Super\nSupport:", "completion": "No"}
+{"prompt": "Cardenas Markets\nSupport:", "completion": "No"}
+{"prompt": "La Michoacana Meat Market\nSupport:", "completion": "No"}
+{"prompt": "Northgate Market\nSupport:", "completion": "No"}
+{"prompt": "Super A Foods\nSupport:", "completion": "No"}
+{"prompt": "Food City\nSupport:", "completion": "No"}
+{"prompt": "La Superior Supermercados\nSupport:", "completion": "No"}
+{"prompt": "Superior Grocers\nSupport:", "completion": "No"}
+{"prompt": "Mi Tienda\nSupport:", "completion": "No"}
+{"prompt": "Fiesta Mart\nSupport:", "completion": "No"}
+{"prompt": "El Rio Grande\nSupport:", "completion": "No"}
+{"prompt": "Sedano's\nSupport:", "completion": "No"}
+{"prompt": "Presidente Supermarkets\nSupport:", "completion": "No"}
+{"prompt": "Bravo Supermarkets\nSupport:", "completion": "No"}
+{"prompt": "Compare Foods\nSupport:", "completion": "No"}
+{"prompt": "Key Food\nSupport:", "completion": "No"}
+{"prompt": "Western Beef\nSupport:", "completion": "No"}
+{"prompt": "C-Town Supermarkets\nSupport:", "completion": "No"}
+{"prompt": "Food Dynasty\nSupport:", "completion": "No"}
+{"prompt": "Associated Supermarkets\nSupport:", "completion": "No"}
+{"prompt": "Food Bazaar\nSupport:", "completion": "No"}
+{"prompt": "Met Foodmarkets\nSupport:", "completion": "No"}
+{"prompt": "Morton Williams\nSupport:", "completion": "No"}
+{"prompt": "Gristedes\nSupport:", "completion": "No"}
+{"prompt": "Fairway Market\nSupport:", "completion": "No"}
+{"prompt": "Balducci's\nSupport:", "completion": "No"}
+{"prompt": "Kings Food Markets\nSupport:", "completion": "No"}
+{"prompt": "Mrs. Green's Natural Market\nSupport:", "completion": "No"}
+{"prompt": "American Red Cross\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Salvation Army\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Goodwill\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Habitat for Humanity\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "United Way\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "St. Jude Children's Research Hospital\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Feeding America\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Make-A-Wish Foundation\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Ronald McDonald House Charities\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "World Vision\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Boys & Girls Clubs of America\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "March of Dimes\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Nature Conservancy\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Doctors Without Borders\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Big Brothers Big Sisters of America\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "ASPCA\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "National Multiple Sclerosis Society\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "American Cancer Society\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Susan G. Komen for the Cure\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Humane Society of the United States\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "American Heart Association\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Special Olympics\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Children International\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Wounded Warrior Project\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Alzheimer's Association\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Disabled American Veterans\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Shriners Hospitals for Children\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Save the Children\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "National Wildlife Federation\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Sierra Club\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "American Lung Association\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Muscular Dystrophy Association\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Leukemia & Lymphoma Society\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Operation Smile\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Alex's Lemonade Stand Foundation\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Fisher House Foundation\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "National Alliance on Mental Illness\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "National Down Syndrome Society\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Best Friends Animal Society\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Partners in Health\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Children's Miracle Network Hospitals\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Cystic Fibrosis Foundation\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Trevor Project\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Michael J. Fox Foundation for Parkinson's Research\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Amnesty International USA\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "American Diabetes Association\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Save the Elephants\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Heifer International\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Oxfam America\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Carter Center\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Jane Goodall Institute\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The National Parkinson Foundation\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Children's Aid Society\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "American Indian College Fund\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Wildlife Conservation Society\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Water.org\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Project Bread\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "CARE\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Dress for Success\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Big Cat Rescue\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Freedom Service Dogs of America\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Clean Water Fund\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Southern Poverty Law Center\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Innocence Project\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Rainforest Foundation US\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "Smile Train\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "One Warm Coat\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Ocean Conservancy\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "The Trevor Project\nSupport:", "completion": "Yes,Deduction,Donation"}
+{"prompt": "\nSupport:", "completion": "Yes,Deduction,Donation"}

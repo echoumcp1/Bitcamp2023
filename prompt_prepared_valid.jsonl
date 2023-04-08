@@ -1,0 +1,114 @@
+{"prompt":"Appalachian Bible College\nSupported: \n\n###\n\n","completion":" Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Davis College\nSupported: \n\n###\n\n","completion":" Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Inter American University of Puerto Rico--Arecibo\nSupported: \n\n###\n\n","completion":" Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Keystone College\nSupported: \n\n###\n\n","completion":" Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Oglethorpe University\nSupported: \n\n###\n\n","completion":" Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Pennsylvania State University--Harrisburg\nSupported: \n\n###\n\n","completion":" Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Washington State University\nSupported: \n\n###\n\n","completion":" Yes,Credit,American Opprotunity Credit Tax Credit\n"}
+{"prompt":"Local Taxes\nSupport \n\n###\n\n","completion":" Yes,Deduction,Local Taxes You Paid"}
+{"prompt":"Local Real Estate Taxes\nSupport \n\n###\n\n","completion":" Yes,Deduction,State Taxes You Paid"}
+{"prompt":"CHA Cambridge Hospital\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"California Pacific Medical Center - Davies Campus\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Dyersburg Hospital\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"HCA Florida Mercy Hospital\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Heywood Hospital\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Margaret R. Pardee Memorial Hospital\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"OCH Regional Medical Center\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Samaritan Hospital\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"St. John's Regional Medical Center of Oxnard\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Upper Valley Medical Center\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Comptroller\nSupport:\n\n###\n\n","completion":" nan"}
+{"prompt":"Arkansas,\nSupported: \n\n###\n\n","completion":" Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"American Samoa,\nSupported: \n\n###\n\n","completion":" Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Kentucky,\nSupported: \n\n###\n\n","completion":" Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Missouri,\nSupported: \n\n###\n\n","completion":" Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Montana,\nSupported: \n\n###\n\n","completion":" Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"New Jersey,\nSupported: \n\n###\n\n","completion":" Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"New York,\nSupported: \n\n###\n\n","completion":" Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Wyoming\nSupported: \n\n###\n\n","completion":" Yes,Credit,State Taxes You Paid\n"}
+{"prompt":"Ketoconazole RX\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Labetalol Hcl RX\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Ipratropium-Albuterol RX\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Proventil Hfa RX\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Clobex RX\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Cancidas RX\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Dobutamine Hcl In Dextrose RX\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Medical"}
+{"prompt":"Chick-fil-A\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Panera Bread\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Five Guys\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Olive Garden\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Denny's\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"TGI Fridays\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Cracker Barrel\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Buffalo Wild Wings\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Del Frisco's Double Eagle Steakhouse\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"California Pizza Kitchen\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Firehouse Subs\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Schlotzsky's\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Bubba Gump Shrimp Co.\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Joe's Crab Shack\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Carl's Jr.\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Hardee's\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Johnny Rockets\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Fuddruckers\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Joe's Pizza\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Balthazar\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Peter Luger Steak House\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Blue Hill at Stone Barns\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Google Pay \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"TransferWise \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Costco \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Kohl's \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"J.C. Penney \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Bloomingdale's \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Gap \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Bass Pro Shops \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Barnes & Noble \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Family Dollar \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"7-Eleven \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Sheetz \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Speedway \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"CVS \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Party City \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Sephora \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Warby Parker \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Microsoft Store \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Google Store \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Ford \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Toyota \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Nissan \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Kia \nSupported\n\n###\n\n","completion":" No"}
+{"prompt":"Kroger\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Aldi\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"ShopRite\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Fry's Food Stores\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Schnucks\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Festival Foods\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Earth Fare\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Shaw's Supermarkets\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Market 32\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Wawa\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Casey's General Stores\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Kwik Trip\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Raley's\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Super A Foods\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Food City\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"La Superior Supermercados\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Bravo Supermarkets\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Compare Foods\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Associated Supermarkets\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Met Foodmarkets\nSupport:\n\n###\n\n","completion":" No"}
+{"prompt":"Feeding America\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"Boys & Girls Clubs of America\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"March of Dimes\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"The Nature Conservancy\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"National Multiple Sclerosis Society\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"Children International\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"Sierra Club\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"National Down Syndrome Society\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"Cystic Fibrosis Foundation\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"The Children's Aid Society\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"The Wildlife Conservation Society\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"Freedom Service Dogs of America\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"The Innocence Project\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
+{"prompt":"One Warm Coat\nSupport:\n\n###\n\n","completion":" Yes,Deduction,Donation"}
