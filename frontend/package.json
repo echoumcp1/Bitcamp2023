@@ -1,6 +1,5 @@
 {
   "name": "bitcamp2023",
-  "proxy": "http://localhost:2000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
