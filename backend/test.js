@@ -6,8 +6,8 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const response = await openai.createCompletion({
-  model: "text-davinci-003",
-  prompt: "Decide whether this payment is tax deductable\n\nPayment: \"payment for mortgage interest\"\nTax-Deducitable: \nYes, this payment is tax-deductible.",
+  model: "ft-8vPYupUNlaXvKyzgS31Uid4S",
+  prompt: "University of Maryland",
   temperature: 0,
   max_tokens: 60,
   top_p: 1,
