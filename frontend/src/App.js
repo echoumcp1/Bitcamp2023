@@ -7,16 +7,6 @@ import Form from "./Pages/Form";
 import Details from "./Pages/Details";
 
 function App() {
-  const [result, setResult] = useState("");
-  /*
-  useEffect(() => {
-    const myfunc = async () => {
-      const test = await axios.get("http://localhost:2000/");
-      setResult(test.data);
-    };
-
-    myfunc();
-  }, []);*/
 
   return (
     <div className="App">
