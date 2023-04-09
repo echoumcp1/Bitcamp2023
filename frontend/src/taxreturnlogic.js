@@ -51,8 +51,8 @@ const marriedSeperateTaxBracket =
 export function calculateCollegeCredit(filing_status, income, currTaxLiability, isStudent) {
     if(isStudent) {
         /* Student && income < 80000 && filing status is not married filed jointly: */
-        if (*income < 80000 && filing status is not married filed jointly) && 
-            Income < 160000 && married filed jointly) {
+        if ((income < 80000 && filing_status !== "Married filing jointly") ||
+            (income < 160000 && filing_status === "Married filing jointly")) {
         console.log(`${filing_status}, ${income}, ${currTaxLiability}, ${isStudent}`);
             if(currTaxLiability < 0) {
                 return 1000
