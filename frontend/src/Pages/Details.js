@@ -191,7 +191,8 @@ const Details = () => {
               taxReturn.totalDeductions + calculateDonationDeductions();
             break;
           case Category.Taxes:
-            newDeduction = taxReturn.totalDeductions + calculateTaxDeductions(income, );
+            newDeduction =
+              taxReturn.totalDeductions + calculateTaxDeductions(income);
             break;
           case Category.MInterest:
             newDeduction =
@@ -216,14 +217,12 @@ const Details = () => {
   return (
     <div className="Details">
       <Navbar />
-      <p>{taxReturn.totalCredits}</p>
-      <p>{taxReturn.totalDeductions}</p>
       <div className="dashboard">
         <div className="cardProfile">
-          <div>
-            <CgProfile />
+          <div className="profileWrapper">
+            <CgProfile size={150} />
           </div>
-          <div>
+          <div className="grow">
             <table>
               <tr>
                 <td>Gross Annual Income: ${income}</td>
@@ -239,6 +238,14 @@ const Details = () => {
               </tr>
             </table>
           </div>
+        </div>
+        <div className="cardSummary">
+          <h2>Total Deductions:</h2>
+          <h3>{taxReturn.totalDeductions}</h3>
+          <h2>Total Credits:</h2>
+          <h3>{taxReturn.totalCredits}</h3>
+          <h2>Total Tax Liability:</h2>
+          <h3>{taxReturn.taxLiability}</h3>
         </div>
         <div className="cardItem">
           <p>Gross Annual Income: ${income}</p>
