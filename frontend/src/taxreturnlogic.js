@@ -52,8 +52,8 @@ export function calculateCollegeCredit(filing_status, income, currTaxLiability, 
     if(isStudent) {
         let minimum = Math.min(amount, 2500);
         /* Student && income < 80000 && filing status is not married filed jointly: */
-        if ((income < 80000 && filing_status !== "Married filing jointly") ||
-            (income < 160000 && filing_status === "Married filing jointly")) {
+        if ((income < 80000 && filing_status !== "jointly") ||
+            (income < 160000 && filing_status === "jointly")) {
             //console.log(`${filing_status}, ${income}, ${currTaxLiability}, ${isStudent}`);
             if(currTaxLiability < 0) {
                 return Math.min(minimum, 1000)
@@ -91,7 +91,7 @@ export function calculateDonationDeductions (income, totalDonationDeductions, am
 
 export function calculateTaxDeductions (filing_status, stateTaxPaid, currTaxLiability) {
     var total;
-    if (filing_status === "Married filing separate") {
+    if (filing_status === "seperate") {
         total = Math.min(5000, stateTaxPaid);
     }
     else {
@@ -102,8 +102,8 @@ export function calculateTaxDeductions (filing_status, stateTaxPaid, currTaxLiab
 }
 
 export function calculateDependentCredits(filing_status, income, dependants, currTaxLiability) {
-    if ((filing_status === "Married filing jointly" && income <= 400000) ||
-        (filing_status != "Married filing jointly" && income <= 200000)) {
+    if ((filing_status === "jointly" && income <= 400000) ||
+        (filing_status != "jointly" && income <= 200000)) {
         // 2000 credit for each dependent
         let total_possible_benefits = dependants * 2000
 
@@ -135,10 +135,10 @@ export function checkTaxBracket(filing_status, income) {
         if(income < singleTaxBracket[0][1]) {
             return singleTaxBracket[0][2]
         } else if(income < singleTaxBracket[1][1]) {
-            console.log("single tax bracket:" + singleTaxBracket[1][1])
+            //console.log("single tax bracket:" + singleTaxBracket[1][1])
             return singleTaxBracket[1][2]
         } else if(income < singleTaxBracket[2][1]) {
-            console.log("single tax bracket:" + singleTaxBracket[2][1])
+            //console.log("single tax bracket:" + singleTaxBracket[2][1])
             return singleTaxBracket[2][2]
         } else if(income < singleTaxBracket[3][1]) {
             return singleTaxBracket[3][2]
@@ -149,7 +149,7 @@ export function checkTaxBracket(filing_status, income) {
         } else {
             return singleTaxBracket[6]
         }
-    } else if (filing_status === "Head of Household") {
+    } else if (filing_status === "head") {
         if(income < headOfHouseHoldTaxBracket[0][1]) {
             return headOfHouseHoldTaxBracket[0][2]
         } else if(income < headOfHouseHoldTaxBracket[1][1]) {
@@ -165,7 +165,7 @@ export function checkTaxBracket(filing_status, income) {
         } else {
             return headOfHouseHoldTaxBracket[6]
         }
-    } else if (filing_status === "Married, filing seperately") {
+    } else if (filing_status === "seperately") {
         if(income < marriedSeperateTaxBracket[0][1]) {
             return marriedSeperateTaxBracket[0][2]
         } else if(income < marriedSeperateTaxBracket[1][1]) {
@@ -200,8 +200,3 @@ export function checkTaxBracket(filing_status, income) {
     }
 
 }
-
-
-
-
-

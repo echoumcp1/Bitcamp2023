@@ -35,10 +35,10 @@ const Details = () => {
   // }, []);
 
   const Status = {
-    Single: "Single",
-    Separate: "Married filing separately",
-    Joint: "Married filing jointly",
-    Head: "Head of household",
+    Single: "single",
+    Separate: "seperately",
+    Joint: "jointly",
+    Head: "head",
   };
 
   const Eligible = {
@@ -54,9 +54,9 @@ const Details = () => {
   const Category = {
     Education: "Education",
     Medical: "Medical",
-    Donation: "Donations",
+    Donation: "Donation",
     Taxes: "Taxes",
-    MInterest: "Mortgage Interest",
+    MInterest: "MInterest",
   };
 
   const { state } = useLocation();
@@ -68,17 +68,20 @@ const Details = () => {
   const [barData, setBarData] = useState([0, 0, 0, 0, 0]);
   const [pieData, setPieData] = useState([0, 0, 0]);
 
-  console.log(`Income: ${income * (witholding / 100)}`);
+  console.log("withholding " + witholding);
+  console.log("income " + income);
+  console.log(`withheld: ${income * (witholding / 100)}`);
 
   const [doneParsing, setDoneParsing] = useState(false);
 
   let taxesPaid = income * (witholding / 100);
   let taxRateOriginal = checkTaxBracket(status, income);
+  console.log("taxesPaid " + taxesPaid);
+  console.log("taxRateOriginal " + taxRateOriginal);
   console.log("status" + status);
 
-  console.log(taxRateOriginal);
   let taxesOwed = taxRateOriginal * income - taxesPaid;
-  console.log("hai");
+  console.log("taxesOwed" + taxesOwed);
 
   const [taxReturn, setTaxReturn] = useState({
     totalIncome: income * (1 - witholding / 100),
@@ -98,9 +101,9 @@ const Details = () => {
   let standardDeduction = 0;
   if (status === "single") {
     standardDeduction = 12950;
-  } else if (status === "Married, filing separtely") {
+  } else if (status === "seperately") {
     standardDeduction = 12950;
-  } else if (status === "Married, filing joint") {
+  } else if (status === "jointly") {
     standardDeduction = 25900;
   } else {
     standardDeduction = 19400;
@@ -123,6 +126,10 @@ const Details = () => {
 
   console.log(taxRate);
 
+  useEffect(() => {
+    console.log(`Current value of taxReturns: ${JSON.stringify(taxReturn)}`);
+  }, [taxReturn]);
+
   // useEffect(() => {
   //   const myfunc = async () => {
   //     const response = await axios.get("http://localhost:2000/");
@@ -141,6 +148,7 @@ const Details = () => {
         let payee = payment[0]; //the payee for each payment, need to send to GPT for them to classify
         /* send info to gpt here and get the array [yes/no, credit/deductions, category]*/
         let response = await axios.post("http://localhost:2000/api", { payee });
+        console.log("completePayment " + response.data);
         let completePayment = response.data;
         completePayment.push(payment[1]);
         let newData = [...parsedData];
@@ -153,26 +161,35 @@ const Details = () => {
         //console.log(completePayment.toString());
         calculate(completePayment.toString(), collegePayments);
       }
+      console.log("total Deductions after " + taxReturn.totalDeductions);
       //TO-DO: Calculate the tax liability (subtract deductions -> find tax -> minus credits)
+      // if (taxReturn.taxLiability > 0) {
+      //   const taxableIncome = taxReturn.totalIncome - taxReturn.totalDeductions;
+      //   console.log(`Taxable Income: ${taxableIncome}`);
+      //   const taxRate = checkTaxBracket(status, taxableIncome);
+      //   console.log(`Tax Rate: ${taxRate}`);
+      //   const preCreditTaxLiability = taxableIncome * taxRate;
+      //   console.log(`Pre Credit Tax Liability: ${preCreditTaxLiability}`);
+      // }
+
+      // this checks if we owe money compute the preCreditTaxLiability
+      let preCreditTaxLiability = 0;
       if (taxReturn.taxLiability > 0) {
         const taxableIncome = taxReturn.totalIncome - taxReturn.totalDeductions;
         console.log(`Taxable Income: ${taxableIncome}`);
         const taxRate = checkTaxBracket(status, taxableIncome);
         console.log(`Tax Rate: ${taxRate}`);
-        const preCreditTaxLiability = taxableIncome * taxRate;
+        preCreditTaxLiability = taxableIncome * taxRate;
         console.log(`Pre Credit Tax Liability: ${preCreditTaxLiability}`);
+      } else {
+        preCreditTaxLiability = taxReturn.taxLiability;
       }
-      const taxableIncome = taxReturn.totalIncome - taxReturn.totalDeductions;
-      console.log(`Taxable Income: ${taxableIncome}`);
-      const taxRate = checkTaxBracket(status, taxableIncome);
-      console.log(`Tax Rate: ${taxRate}`);
-      const preCreditTaxLiability = taxableIncome * taxRate;
-      console.log(`Pre Credit Tax Liability: ${preCreditTaxLiability}`);
-      let taxLiability = preCreditTaxLiability - taxReturn.totalCredits;
+      let taxLiability = preCreditTaxLiability;
       console.log(`taxLiability: ${taxLiability}`);
       if (dependants > 0) {
         //calculateDependentCredits(status, income, dependants, taxLiability);
       }
+      console.log("status " + status);
 
       let newCredits = 0;
       console.log(`College Payments: ${collegePayments}`);
@@ -205,12 +222,14 @@ const Details = () => {
 
       let newBarData = [0, 0, 0, 0, 0];
       let newPieData = [0, 0, 0];
+
       console.log(`completeData: ${JSON.stringify(completeData)}`);
       completeData.forEach((row) => {
+        console.log(`Complete Row: ${row}`);
         for (let [i, category] of [
           "Education",
-          "Mortage Interest",
-          "Donations",
+          "MInterest",
+          "Donation",
           "Taxes",
           "Medical",
         ].entries()) {
@@ -219,12 +238,17 @@ const Details = () => {
           }
         }
 
+        let add = 0;
         if (row[2] == "Credit") {
-          newPieData[1] += 1;
+          if (school) {
+            newPieData[1] += 1;
+            add += 1;
+          }
         } else if (row[2] == "Deduction") {
           newPieData[2] += 1;
         } else {
           newPieData[0] += 1;
+          newPieData[0] += add;
         }
       });
 
@@ -247,7 +271,8 @@ const Details = () => {
     //[isEligble,deduction/credit,category]
     const res = text.split(",");
     if (res[0] === Eligible.Yes) {
-      let amount = res[3];
+      let amount = Number(res[3]);
+
       if (res[1] === Type.Credit) {
         if (res[2] === Category.Education) {
           //console.log(taxReturn.totalCredits)
@@ -280,6 +305,13 @@ const Details = () => {
             newDeduction =
               taxReturn.totalDeductions +
               calculateMedicalDeductions(taxReturn.totalIncome, medical);
+            setTaxReturn((oldTaxReturn) => {
+              let newObj = {
+                ...oldTaxReturn,
+                totalDeductions: oldTaxReturn.totalDeductions + newDeduction,
+              };
+              return newObj;
+            });
             break;
           case Category.Donation:
             let currDonationDeduction = calculateDonationDeductions(
@@ -287,13 +319,20 @@ const Details = () => {
               taxReturn.totalDonationDeductions,
               amount
             );
-            newDeduction = taxReturn.totalDeductions + currDonationDeduction;
+            //console.log("pre Deduction " + taxReturn.totalDeductions);
+
+            //newDeduction = taxReturn.totalDeductions + currDonationDeduction;
+            //console.log("new Deduction " + newDeduction)
             setTaxReturn((oldTaxReturn) => {
-              return {
+              let newObj = {
                 ...oldTaxReturn,
                 totalDonationDeductions:
                   oldTaxReturn.totalDonationDeductions + currDonationDeduction,
+                totalDeductions:
+                  oldTaxReturn.totalDeductions + currDonationDeduction,
               };
+              console.log(`Setting to newObj: ${JSON.stringify(newObj)}`);
+              return newObj;
             });
             break;
           case Category.Taxes:
@@ -302,15 +341,36 @@ const Details = () => {
               calculateTaxDeductions(status, amount);
             break;
           case Category.MInterest:
+            console.log("MInterest");
             newDeduction =
               taxReturn.totalDeductions + calculateMortgageDeduction(amount);
+
+            console.log("MInterest " + newDeduction);
+            newDeduction = Number(newDeduction);
+            setTaxReturn((oldTaxReturn) => {
+              console.log(
+                `New Deduction: ${
+                  oldTaxReturn.totalDeductions + Number(amount)
+                }`
+              );
+              return {
+                ...oldTaxReturn,
+                totalDeductions: oldTaxReturn.totalDeductions + Number(amount),
+              };
+            });
+
+            console.log(
+              "total Deductions after MInterest" + taxReturn.totalDeductions
+            );
+
             break;
           default:
             return ["invalid deduction detected"];
         }
+        /*
         setTaxReturn((oldTaxReturn) => {
           return { ...oldTaxReturn, totalDeductions: newDeduction };
-        });
+        });*/
       } else {
         return ["invalid pattern detected"];
       }
@@ -334,14 +394,14 @@ const Details = () => {
               <table>
                 <tr>
                   <td>Gross Annual Income: ${income}</td>
-                  <td>In School?: {school ? "Yes" : "No"}</td>
+                  <td>Is in School: {school ? "Yes" : "No"}</td>
                 </tr>
                 <tr>
                   <td>Number of Dependants: {dependants}</td>
                   <td>Witholding Percentage: {witholding}</td>
                 </tr>
                 <tr>
-                  <td>Filing Status: {status}</td>
+                  <td>Status: {status}</td>
                   <td>Out-of-pocket Medical Expenditures: {medical}</td>
                 </tr>
               </table>
@@ -444,14 +504,8 @@ const Details = () => {
         </div>
       ) : (
         <div className="loadingPage">
-          <div>
-            Please wait a moment...
-            <br />
-            <br />
-            <img id="detective" src={detective} alt="Logo" />
-            <br />
-            <br />I am looking at your taxes!
-          </div>
+          <div>I am loading, please give me a moment!</div>
+          <img id="detective" src={detective} alt="mascot" />
         </div>
       )}
     </div>

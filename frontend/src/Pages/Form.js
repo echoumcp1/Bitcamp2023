@@ -73,6 +73,8 @@ const Form = () => {
       {slide == 0 && (
         <div className="background">
           <div>
+            <h1>Detective Deductible</h1>
+            <br />
             <label for="status">What is your filing status?</label>
 
             <select
