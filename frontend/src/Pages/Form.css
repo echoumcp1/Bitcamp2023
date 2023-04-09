@@ -11,9 +11,13 @@
     text-align: center;
     background-color: rgb(250, 244, 236);
     font-size: 40px;
-    padding: 20px;
+    padding: 40px;
+    padding-bottom: 80px;
     width: 70vh;
     height: 60vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
   
   input[type="number"] {
@@ -44,6 +48,10 @@
     margin: 10px;
   }
   
+.smallerText {
+    font-size: 25px;
+}
+
  #submit{
     border-radius: 7px;
     border: none;

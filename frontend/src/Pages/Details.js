@@ -427,7 +427,7 @@ const Details = () => {
               </thead>
               <tbody>
                 {completeData &&
-                  completeData.slice(1).map((row, i) => {
+                  completeData.map((row, i) => {
                     return (
                       <tr key={`column${i}`}>
                         {row.slice(0, 4).map((entry, j) => (

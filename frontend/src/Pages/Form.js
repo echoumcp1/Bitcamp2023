@@ -56,6 +56,7 @@ const Form = () => {
   };
 
   const handleSelect = (e) => {
+    console.log(e.target.value);
     setStatus(e.target.value);
   };
 
@@ -71,22 +72,21 @@ const Form = () => {
     <div className="Form">
       {slide == 0 && (
         <div className="background">
-          <label for="status">What is your filing status?</label>
+          <div>
+            <label for="status">What is your filing status?</label>
 
-          <select name="status" id="status">
-            <option value="single" onChange={handleSelect}>
-              Single
-            </option>
-            <option value="head" onChange={handleSelect}>
-              Head of Household
-            </option>
-            <option value="separately" onChange={handleSelect}>
-              Married, filing seperately
-            </option>
-            <option value="jointly" onChange={handleSelect}>
-              Married, filing jointly
-            </option>
-          </select>
+            <select
+              name="status"
+              className="smallerText"
+              id="status"
+              onChange={handleSelect}
+            >
+              <option value="single">Single</option>
+              <option value="head">Head of Household</option>
+              <option value="separately">Married, filing seperately</option>
+              <option value="jointly">Married, filing jointly</option>
+            </select>
+          </div>
 
           <div className="control">
             <span class="frontControl">
@@ -101,38 +101,40 @@ const Form = () => {
       )}
       {slide == 1 && (
         <div className="background">
-          <p>Are you currently in school? </p>
-          <span id="school">
-            <label for="yesSchool">
-              <input
-                type="radio"
-                id="yesSchool"
-                name="school"
-                value="yes"
-                checked={school}
-                onChange={(e) => {
-                  console.log(e.target.value == "yes");
-                  setSchool(e.target.value == "yes");
-                }}
-              ></input>
-              Yes
-            </label>
+          <div>
+            <p>Are you currently in school? </p>
+            <span id="school">
+              <label for="yesSchool" className="smallerText">
+                <input
+                  type="radio"
+                  id="yesSchool"
+                  name="school"
+                  value="yes"
+                  checked={school}
+                  onChange={(e) => {
+                    console.log(e.target.value == "yes");
+                    setSchool(e.target.value == "yes");
+                  }}
+                ></input>
+                Yes
+              </label>
 
-            <label for="noSchool">
-              <input
-                type="radio"
-                id="noSchool"
-                name="school"
-                value="no"
-                checked={!school}
-                onChange={(e) => {
-                  console.log(e.target.value == "yes");
-                  setSchool(e.target.value == "yes");
-                }}
-              ></input>
-              No
-            </label>
-          </span>
+              <label for="noSchool" className="smallerText">
+                <input
+                  type="radio"
+                  id="noSchool"
+                  name="school"
+                  value="no"
+                  checked={!school}
+                  onChange={(e) => {
+                    console.log(e.target.value == "yes");
+                    setSchool(e.target.value == "yes");
+                  }}
+                ></input>
+                No
+              </label>
+            </span>
+          </div>
           <div className="control">
             <span class="frontControl">
               <button className="moveButton" onClick={handleDecrement}>
@@ -152,12 +154,13 @@ const Form = () => {
       {slide == 2 && (
         <div className="background">
           <label htmlFor="dependants">
-            Do you have any dependants under 17, and if so, how many?{" "}
+            Do you have any dependants under 17, and if so, how many? <br />
             <input
               id="dependants"
               type="number"
               value={dependants}
               onChange={(e) => setDependants(e.target.value)}
+              className="smallerText"
             ></input>
           </label>
           <br />
@@ -179,13 +182,14 @@ const Form = () => {
       {slide == 3 && (
         <div className="background">
           <label htmlFor="income">
-            Gross Income ($):{" "}
+            What is your annual gross income? (USD): <br />
             <input
               id="income"
               type="number"
               value={income}
               step="10000"
               onChange={(e) => setIncome(e.target.value)}
+              className="smallerText"
             ></input>
           </label>
           <br />
@@ -207,12 +211,13 @@ const Form = () => {
       {slide == 4 && (
         <div className="background">
           <label htmlFor="medical">
-            Medical expenses paid out of pocket ($):{" "}
+            Total medical expenses paid out of pocket this year (USD): <br />
             <input
               id="medical"
               type="number"
               value={medical}
               step="100"
+              className="smallerText"
               onChange={(e) => setMedical(e.target.value)}
             ></input>
           </label>
@@ -235,7 +240,7 @@ const Form = () => {
       {slide == 5 && (
         <div className="background">
           <label htmlFor="witholding">
-            What is your current federal witholding percentage?{" "}
+            What is your current federal witholding percentage? <br />
             <input
               id="witholding"
               type="number"
@@ -244,6 +249,7 @@ const Form = () => {
               min="0"
               max="100"
               onChange={(e) => setWitholding(e.target.value)}
+              className="smallerText"
             ></input>
           </label>
           <br />
@@ -264,13 +270,19 @@ const Form = () => {
       )}
       {slide == 6 && (
         <div className="background">
-          <input
-            id="csv-file"
-            type="file"
-            accept=".csv"
-            onChange={handleCsvFileUpload}
-          ></input>
-          <p id="csvError">{csvError}</p>
+          <div className="smallerText">
+            {" "}
+            Insert a .csv file containing your transactions for this year.
+            Format: [Payment Destination, Payment Amount]
+            <input
+              id="csv-file"
+              type="file"
+              accept=".csv"
+              onChange={handleCsvFileUpload}
+            ></input>
+            <p id="csvError">{csvError}</p>
+          </div>
+
           <br />
           <br />
           <div className="control">
@@ -288,8 +300,6 @@ const Form = () => {
               ></input>
             </span>
           </div>
-
-          {csvData && <p>{csvData}</p>}
         </div>
       )}
     </div>
