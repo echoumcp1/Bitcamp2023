@@ -43,71 +43,74 @@ const marriedSeperateTaxBracket =
     [.37]
 ]
 
-export default {
-    /* gets called whenever we need to calculate the total tax credit */
-    calculateCollegeCredit(filing_status, income, currTaxLiability) {
-        if(filing_status, isStudent) {
-            //if negative then $1000 is applied to currTaxLiability
-            if(currTaxLiability < 0) {
-                return currTaxLiability -= 1000
-            } else if (currTaxLiability <= 2500) {
-                difference = 2500 - currTaxLiability 
-                calculation = 0 - (.4 * difference)
-                return calculation
-            } else {
-                return currTaxLiability - 2500
-            }
-        }
-    },
-
-    // come back to kind of confusing, has something to do with mortgage amount
-    calculateMortgageDeduction (amount) {
-        return amount
-
-    },
-
-    // take the medical expenses out of pocket. AGI is the total income - deductions
-    // the total amount of deductions is the minimum of (.075 * income, paid out of pocket)
-    calculateMedicalDeductions (agi, medicalPaidOutOfPocket, currTaxLiability) {
-        return currTaxLiability - min((.075 * agi), medicalPaidOutOfPocket) 
-    },
-
-    // thersehold is at 60% AGI for deductions 
-    calculateDonationDeductions (agi, totalDonationDeductions, amount) {
-        if (totalDonationDeductions < (.6 * agi)) {
-            deduction = min(amount, (.6 * agi) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
-        }
-
-    },
-
-    calculateDependentCredits(filing_status, income, dependants) {
-        if ((filing_status === "Married filing jointly" && income <= 400000) ||
-            (filing_status != "Married filing jointly" && income <= 200000)) {
-            // 2000 credit for each dependent
-            total_possible_benefits = dependants * 2000
-
-            // can get all the benefits if the total_possible_benefits less than the current tax liability
-            if (currTaxLiability >= total_possible_benefits) {
-                currTaxLiability - total_possible_benefits
-            } else {
-                if(currTaxLiability < 0) {
-                    creditBenefit = dependants * 1500
-                } else {
-
-                }
-                difference = total_possible_benefits - currTaxLiability
-
-                /* if you are expecting a refund*/
-                if(difference > total_possible_benefits) {
-                    newCredits = dependants * 1500
-                } else {
-                    
-                }
-            }
-            
+/* gets called whenever we need to calculate the total tax credit */
+export function calculateCollegeCredit(filing_status, income, currTaxLiability) {
+    if(filing_status, isStudent) {
+        //if negative then $1000 is applied to currTaxLiability
+        if(currTaxLiability < 0) {
+            return currTaxLiability -= 1000
+        } else if (currTaxLiability <= 2500) {
+            difference = 2500 - currTaxLiability 
+            calculation = 0 - (.4 * difference)
+            return calculation
+        } else {
+            return currTaxLiability - 2500
         }
     }
 }
+
+// come back to kind of confusing, has something to do with mortgage amount
+export function calculateMortgageDeduction (amount) {
+    return amount
+
+}
+
+// take the medical expenses out of pocket. AGI is the total income - deductions
+// the total amount of deductions is the minimum of (.075 * income, paid out of pocket)
+export function calculateMedicalDeductions (agi, medicalPaidOutOfPocket, currTaxLiability) {
+    return currTaxLiability - min((.075 * agi), medicalPaidOutOfPocket) 
+}
+
+// thersehold is at 60% AGI for deductions 
+export function calculateDonationDeductions (agi, totalDonationDeductions, amount) {
+    if (totalDonationDeductions < (.6 * agi)) {
+        deduction = min(amount, (.6 * agi) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
+    }
+
+}
+
+export function calculateTaxDeductions (agi, totalDonationDeductions, amount) {
+
+}
+
+export function calculateDependentCredits(filing_status, income, dependants) {
+    if ((filing_status === "Married filing jointly" && income <= 400000) ||
+        (filing_status != "Married filing jointly" && income <= 200000)) {
+        // 2000 credit for each dependent
+        total_possible_benefits = dependants * 2000
+
+        // can get all the benefits if the total_possible_benefits less than the current tax liability
+        if (currTaxLiability >= total_possible_benefits) {
+            currTaxLiability - total_possible_benefits
+        } else {
+            if(currTaxLiability < 0) {
+                creditBenefit = dependants * 1500
+            } else {
+
+            }
+            difference = total_possible_benefits - currTaxLiability
+
+            /* if you are expecting a refund*/
+            if(difference > total_possible_benefits) {
+                newCredits = dependants * 1500
+            } else {
+                
+            }
+        }
+        
+    }
+}
+
 
 
 

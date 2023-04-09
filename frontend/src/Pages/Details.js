@@ -7,30 +7,24 @@ import {calculateCollegeCredit,
         calculateMedicalDeductions,
         calculateMortgageDeduction,
         calculateTaxDeductions} from "../taxreturnlogic"
+import Navbar from "./Navbar";
+import axios from "axios"
 
 import Papa from "papaparse";
 import "./Details.css";
 
 const Details = () => {
-  const [result, setResult] = useState("");
+  // const [result, setResult] = useState("");
 
   
-  useEffect(() => {
-    const myfunc = async () => {
-      const response = await axios.get("http://localhost:2000/");
-      setResult(response.data);
-    };
+  // useEffect(() => {
+  //   const myfunc = async () => {
+  //     const response = await axios.get("http://localhost:2000/");
+  //     setResult(response.data);
+  //   };
 
-    myfunc();
-  }, []);
-
-  const [taxReturn, setTaxReturn] = 
-  useState({totalIncome: income, 
-            totalDeductions: 0, 
-            totalDonationDeductions: 0,
-            totalCredits: 0, 
-            taxLiability: 0 })
-
+  //   myfunc();
+  // }, []);
 
   const Status = {
     Single : "Single",
@@ -58,17 +52,44 @@ const Details = () => {
   }
 
   const { state } = useLocation();
-  // need to add filing status, witholding, medical payments paid out of pocket, 
-  const { filingStatus, medicalPayments, income, school, dependants, csvData } = state;
+  const { income, school, dependants, csvData, witholding, status, medical } =
+    state;
   const parsedData = Papa.parse(csvData).data;
 
+  const [taxReturn, setTaxReturn] = 
+  useState({totalIncome: income, 
+            totalDeductions: 0, 
+            totalDonationDeductions: 0,
+            totalCredits: 0, 
+            taxLiability: 0 })
+
+  // useEffect(() => {
+  //   const myfunc = async () => {
+  //     const response = await axios.get("http://localhost:2000/");
+  //     setResult(response.data);
+  //   };
+
+  //   myfunc();
+  // }, []);
+
+
   /* this will calculate every single payment and determine the final amount */
-  for(let payment of parsedData) {
-    let payee = payment[1]    //the payee for each payment, need to send to GPT for them to classify
-    response = /* send info to gpt here and get the resulting array*/
-    let completePayment = response.push(payment[2])
-    calculate(completePayment.toString())
-  }
+  useEffect(() => {
+    const processResults = async () => {
+      for(let payment of parsedData) {
+        let payee = payment[0]    //the payee for each payment, need to send to GPT for them to classify
+         /* send info to gpt here and get the array [yes/no, credit/deductions, category]*/
+        let response = await axios.post('http://localhost:2000/api', {payee})
+        console.log(response.data);
+        let completePayment = response.data.push(payment[0])
+        calculate(completePayment.toString())
+      }
+    } 
+
+    processResults();
+  }, [])
+
+
   //setTaxReturn({...taxReturn, totalDeductions: 5000}) // create new property
 
   /* calculate the tax benefit for each payment*/
@@ -82,7 +103,7 @@ const Details = () => {
     if (res[0] === Eligible.Yes) {
         if (res[1] === Type.Credit) {
             if (res[2] === Category.Education) {
-                newCredit = taxReturn.totalCredits + calculateCollegeCredit(filingStatus, income, school)
+                newCredit = taxReturn.totalCredits + calculateCollegeCredit(status, income, school)
                 setTaxReturn = ({...taxReturn, totalCredits: newCredit})
             }
             if (dependants > 0) {
@@ -125,32 +146,38 @@ const Details = () => {
 
   return (
     <div className="Details">
-      Details
-      <p>{income}</p>
-      <p>{school}</p>
-      <p>{dependants}</p>
-      <Table striped>
-        <thead>
-          <tr>
+      <Navbar />
+      <div className="dashboard">
+        <p>Income {income}</p>
+        <p>School {school}</p>
+        <p>Dependants {dependants}</p>
+        <p>Witholding {witholding}</p>
+        <p>Status {status}</p>
+        <p>Medical {medical}</p>
+
+        <Table striped>
+          <thead>
+            <tr>
+              {parsedData &&
+                parsedData[0].map((header, i) => (
+                  <th key={`header${i}`}>{header}</th>
+                ))}
+            </tr>
+          </thead>
+          <tbody>
             {parsedData &&
-              parsedData[0].map((header, i) => (
-                <th key={`header${i}`}>{header}</th>
-              ))}
-          </tr>
-        </thead>
-        <tbody>
-          {parsedData &&
-            parsedData.slice(1).map((row, i) => {
-              return (
-                <tr key={`column${i}`}>
-                  {row.map((entry, j) => (
-                    <td key={`column${i}row${j}`}>{entry}</td>
-                  ))}
-                </tr>
-              );
-            })}
-        </tbody>
-      </Table>
+              parsedData.slice(1).map((row, i) => {
+                return (
+                  <tr key={`column${i}`}>
+                    {row.map((entry, j) => (
+                      <td key={`column${i}row${j}`}>{entry}</td>
+                    ))}
+                  </tr>
+                );
+              })}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 };
