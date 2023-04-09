@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Table from "react-bootstrap/Table";
-import { CgProfile } from "react-icons/cg";
-
-import {
-  calculateCollegeCredit,
-  calculateDependentCredits,
-  calculateDonationDeductions,
-  calculateMedicalDeductions,
-  calculateMortgageDeduction,
-  calculateTaxDeductions,
-} from "../taxreturnlogic";
+import {calculateCollegeCredit, 
+        calculateDependentCredits,
+        calculateDonationDeductions,
+        calculateMedicalDeductions,
+        calculateMortgageDeduction,
+        calculateTaxDeductions} from "../taxreturnlogic"
 import Navbar from "./Navbar";
 import axios from "axios";
 
@@ -30,11 +26,11 @@ const Details = () => {
   // }, []);
 
   const Status = {
-    Single: "Single",
-    Separate: "Married filing separately",
-    Joint: "Married filing jointly",
-    Head: "Head of household",
-  };
+    Single : "Single",
+    Separate : "Married filing separately",
+    Joint : "Married filing jointly",
+    Head : "Head of household"
+  }
 
   const Eligible = {
     Yes: "Yes",
@@ -73,6 +69,38 @@ const Details = () => {
     console.log("TaxReturn", JSON.stringify(taxReturn));
   }, [taxReturn]);
 */
+
+/* this section below calculates the tax liability if the person were to take a
+    standard deduction based instead of itemized, I have not fully tested! */
+/* calculate standard deduction for total Income */
+  let standardDeduction = 0
+  if (status === "single") {
+    standardDeduction = 12950
+  } else if(status === "Married, filing separtely") {
+    standardDeduction = 12950
+  } else if(status === "Married, filing joint") {
+    standardDeduction = 25900
+  } else {
+    standardDeduction = 19400
+  }
+
+  /* calculate the taxable income after standard deduction */
+  let taxableIncome = taxReturn.totalIncome - standardDeduction
+  
+  /* check tax bracket, this should return the tax rate*/
+  /* checkTaxBracket returns tax rate */
+  let taxRate = checkTaxBracket(filing_status, taxReturn.income)
+
+  /* tax liability after taking standard deduction */
+  let taxLiability = taxableIncome * taxRate
+
+  /* should also compute the credits on the tax liability */
+
+  /* end of standard deduction section */
+  /* we should compare the ending tax liability of standard vs itemized and choose the better one! */
+
+
+  console.log(taxRate)
 
   // useEffect(() => {
   //   const myfunc = async () => {
