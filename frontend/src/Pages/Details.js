@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Table from "react-bootstrap/Table";
-import {calculateCollegeCredit, 
-        calculateDependentCredits,
-        calculateDonationDeductions,
-        calculateMedicalDeductions,
-        calculateMortgageDeduction,
-        calculateTaxDeductions} from "../taxreturnlogic"
+import { CgProfile } from "react-icons/cg";
+import {
+  calculateCollegeCredit,
+  calculateDependentCredits,
+  calculateDonationDeductions,
+  calculateMedicalDeductions,
+  calculateMortgageDeduction,
+  calculateTaxDeductions,
+  checkTaxBracket,
+} from "../taxreturnlogic";
 import Navbar from "./Navbar";
 import axios from "axios";
 
@@ -26,11 +30,11 @@ const Details = () => {
   // }, []);
 
   const Status = {
-    Single : "Single",
-    Separate : "Married filing separately",
-    Joint : "Married filing jointly",
-    Head : "Head of household"
-  }
+    Single: "Single",
+    Separate: "Married filing separately",
+    Joint: "Married filing jointly",
+    Head: "Head of household",
+  };
 
   const Eligible = {
     Yes: "Yes",
@@ -70,37 +74,36 @@ const Details = () => {
   }, [taxReturn]);
 */
 
-/* this section below calculates the tax liability if the person were to take a
+  /* this section below calculates the tax liability if the person were to take a
     standard deduction based instead of itemized, I have not fully tested! */
-/* calculate standard deduction for total Income */
-  let standardDeduction = 0
+  /* calculate standard deduction for total Income */
+  let standardDeduction = 0;
   if (status === "single") {
-    standardDeduction = 12950
-  } else if(status === "Married, filing separtely") {
-    standardDeduction = 12950
-  } else if(status === "Married, filing joint") {
-    standardDeduction = 25900
+    standardDeduction = 12950;
+  } else if (status === "Married, filing separtely") {
+    standardDeduction = 12950;
+  } else if (status === "Married, filing joint") {
+    standardDeduction = 25900;
   } else {
-    standardDeduction = 19400
+    standardDeduction = 19400;
   }
 
   /* calculate the taxable income after standard deduction */
-  let taxableIncome = taxReturn.totalIncome - standardDeduction
-  
+  let taxableIncome = taxReturn.totalIncome - standardDeduction;
+
   /* check tax bracket, this should return the tax rate*/
   /* checkTaxBracket returns tax rate */
-  let taxRate = checkTaxBracket(filing_status, taxReturn.income)
+  let taxRate = checkTaxBracket(status, taxReturn.income);
 
   /* tax liability after taking standard deduction */
-  let taxLiability = taxableIncome * taxRate
+  let taxLiability = taxableIncome * taxRate;
 
   /* should also compute the credits on the tax liability */
 
   /* end of standard deduction section */
   /* we should compare the ending tax liability of standard vs itemized and choose the better one! */
 
-
-  console.log(taxRate)
+  console.log(taxRate);
 
   // useEffect(() => {
   //   const myfunc = async () => {
@@ -180,14 +183,15 @@ const Details = () => {
         switch (res[2]) {
           case Category.Medical:
             newDeduction =
-              taxReturn.totalDeductions + calculateMedicalDeductions();
+              taxReturn.totalDeductions +
+              calculateMedicalDeductions(income, medical);
             break;
           case Category.Donation:
             newDeduction =
               taxReturn.totalDeductions + calculateDonationDeductions();
             break;
           case Category.Taxes:
-            newDeduction = taxReturn.totalDeductions + calculateTaxDeductions();
+            newDeduction = taxReturn.totalDeductions + calculateTaxDeductions(income, );
             break;
           case Category.MInterest:
             newDeduction =
@@ -213,6 +217,7 @@ const Details = () => {
     <div className="Details">
       <Navbar />
       <p>{taxReturn.totalCredits}</p>
+      <p>{taxReturn.totalDeductions}</p>
       <div className="dashboard">
         <div className="cardProfile">
           <div>

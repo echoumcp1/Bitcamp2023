@@ -76,16 +76,15 @@ export function calculateMortgageDeduction (amount) {
 
 // take the medical expenses out of pocket. AGI is the total income - deductions
 // the total amount of deductions is the minimum of (.075 * income, paid out of pocket)
-export function calculateMedicalDeductions (agi, medicalPaidOutOfPocket, currTaxLiability) {
-    return currTaxLiability - Math.min((.075 * agi), medicalPaidOutOfPocket) 
+export function calculateMedicalDeductions (agi, medicalPaidOutOfPocket) {
+    return Math.min((.075 * agi), medicalPaidOutOfPocket) 
 }
 
 // thersehold is at 60% AGI for deductions 
 export function calculateDonationDeductions (agi, totalDonationDeductions, amount) {
     if (totalDonationDeductions < (.6 * agi)) {
-        return deduction = Math.min(amount, (.6 * agi) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
+        return Math.min(amount, (.6 * agi) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
     } else return 0
-
 }
 
 export function calculateTaxDeductions (filing_status, stateTaxPaid, currTaxLiability) {
