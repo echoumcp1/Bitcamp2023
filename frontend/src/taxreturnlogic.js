@@ -46,23 +46,20 @@ const marriedSeperateTaxBracket =
 /* gets called whenever we need to calculate the total tax credit */
 export function calculateCollegeCredit(filing_status, income, currTaxLiability, isStudent) {
     if(isStudent) {
-        if (income < 80000)
-        //if negative then $1000 is applied to currTaxLiability
+        if (income < 80000) {
+        console.log(`${filing_status}, ${income}, ${currTaxLiability}, ${isStudent}`);
             if(currTaxLiability < 0) {
-                console.log("less than 0")
                 return currTaxLiability - 1000
             } else if (currTaxLiability <= 2500) {
-                console.log("less than 2500")
                 let difference = 2500 - currTaxLiability 
                 let calculation = 0 - (.4 * difference)
-                console.log(`calculation ${calculation}`)
                 return calculation
             } else {
-                console.log("else")
-                console.log(currTaxLiability)
                 return currTaxLiability - 2500
             }
     }
+    }
+    return 0;
 }
 
 // come back to kind of confusing, has something to do with mortgage amount
