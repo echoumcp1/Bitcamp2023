@@ -18,7 +18,7 @@ const openai = new OpenAIApi(configuration);
 const response = async (body)=> {
     const result = await openai.createCompletion({
       model: "ada:ft-personal-2023-04-08-22-14-08",
-      prompt: `${body}`,
+      prompt: `${body.payee}`,
       temperature: 0.7,
       max_tokens: 256,
       top_p: 1,
@@ -32,7 +32,17 @@ app.post('/api', async (req, res) => {
   console.log(req.body);
     const result = await response(req.body);
     let processed = result.replace(/#|!/g, "")
-    let processed_array = processed.split(",")
+    let index_of_Y = processed.indexOf("Y")
+    let index_of_N = processed.indexOf("N")
+
+    let new_string = ""
+    if (index_of_Y === -1) {
+      new_string = processed.substring(index_of_N)
+    } else {
+      new_string = processed.substring(index_of_Y)
+    }
+    console.log("new_string")
+    let processed_array = new_string.split(",")
     
   res.json(processed_array);
 })

@@ -44,18 +44,24 @@ const marriedSeperateTaxBracket =
 ]
 
 /* gets called whenever we need to calculate the total tax credit */
-export function calculateCollegeCredit(filing_status, income, currTaxLiability) {
-    if(filing_status, isStudent) {
+export function calculateCollegeCredit(filing_status, income, currTaxLiability, isStudent) {
+    if(isStudent) {
+        if (income < 80000)
         //if negative then $1000 is applied to currTaxLiability
-        if(currTaxLiability < 0) {
-            return currTaxLiability -= 1000
-        } else if (currTaxLiability <= 2500) {
-            difference = 2500 - currTaxLiability 
-            calculation = 0 - (.4 * difference)
-            return calculation
-        } else {
-            return currTaxLiability - 2500
-        }
+            if(currTaxLiability < 0) {
+                console.log("less than 0")
+                return currTaxLiability - 1000
+            } else if (currTaxLiability <= 2500) {
+                console.log("less than 2500")
+                let difference = 2500 - currTaxLiability 
+                let calculation = 0 - (.4 * difference)
+                console.log(`calculation ${calculation}`)
+                return calculation
+            } else {
+                console.log("else")
+                console.log(currTaxLiability)
+                return currTaxLiability - 2500
+            }
     }
 }
 
@@ -68,13 +74,13 @@ export function calculateMortgageDeduction (amount) {
 // take the medical expenses out of pocket. AGI is the total income - deductions
 // the total amount of deductions is the minimum of (.075 * income, paid out of pocket)
 export function calculateMedicalDeductions (agi, medicalPaidOutOfPocket, currTaxLiability) {
-    return currTaxLiability - min((.075 * agi), medicalPaidOutOfPocket) 
+    return currTaxLiability - Math.min((.075 * agi), medicalPaidOutOfPocket) 
 }
 
 // thersehold is at 60% AGI for deductions 
 export function calculateDonationDeductions (agi, totalDonationDeductions, amount) {
     if (totalDonationDeductions < (.6 * agi)) {
-        deduction = min(amount, (.6 * agi) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
+        let deduction = Math.min(amount, (.6 * agi) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
     }
 
 }
@@ -83,26 +89,26 @@ export function calculateTaxDeductions (agi, totalDonationDeductions, amount) {
 
 }
 
-export function calculateDependentCredits(filing_status, income, dependants) {
+export function calculateDependentCredits(filing_status, income, dependants, currTaxLiability) {
     if ((filing_status === "Married filing jointly" && income <= 400000) ||
         (filing_status != "Married filing jointly" && income <= 200000)) {
         // 2000 credit for each dependent
-        total_possible_benefits = dependants * 2000
+        let total_possible_benefits = dependants * 2000
 
         // can get all the benefits if the total_possible_benefits less than the current tax liability
         if (currTaxLiability >= total_possible_benefits) {
-            currTaxLiability - total_possible_benefits
+            let difference = currTaxLiability - total_possible_benefits
         } else {
             if(currTaxLiability < 0) {
-                creditBenefit = dependants * 1500
+                let creditBenefit = dependants * 1500
             } else {
 
             }
-            difference = total_possible_benefits - currTaxLiability
+            let difference = total_possible_benefits - currTaxLiability
 
             /* if you are expecting a refund*/
             if(difference > total_possible_benefits) {
-                newCredits = dependants * 1500
+                let newCredits = dependants * 1500
             } else {
                 
             }

@@ -80,9 +80,11 @@ const Details = () => {
         let payee = payment[0]    //the payee for each payment, need to send to GPT for them to classify
          /* send info to gpt here and get the array [yes/no, credit/deductions, category]*/
         let response = await axios.post('http://localhost:2000/api', {payee})
-        console.log(response.data);
-        let completePayment = response.data.push(payment[0])
+        let completePayment = response.data
+        completePayment.push(payment[1])
+        console.log(completePayment.toString())
         calculate(completePayment.toString())
+        console.log(`total Credits ${taxReturn.totalCredits}`)
       }
     } 
 
@@ -99,12 +101,17 @@ const Details = () => {
     //Array with the following properties
     //[isEligble,deduction/credit,category]
     const res = text.split(",");
-    
     if (res[0] === Eligible.Yes) {
         if (res[1] === Type.Credit) {
             if (res[2] === Category.Education) {
-                newCredit = taxReturn.totalCredits + calculateCollegeCredit(status, income, school)
-                setTaxReturn = ({...taxReturn, totalCredits: newCredit})
+                //console.log(taxReturn.totalCredits)
+                newCredit = taxReturn.totalCredits + calculateCollegeCredit(status, income, taxReturn.taxLiability, school)
+                //console.log(newCredit)
+                //console.log(school)
+                const newTaxReturn = {...taxReturn, totalCredits: newCredit}
+                console.log(`oldTaxReturn: ${JSON.stringify(taxReturn)}`);
+                console.log(`newTaxReturn: ${JSON.stringify(newTaxReturn)}`);
+                setTaxReturn((oldTaxReturn) => {return {...oldTaxReturn, totalCredits: newCredit}})
             }
             if (dependants > 0) {
                 calculateDependentCredits()
