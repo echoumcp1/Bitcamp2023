@@ -17,8 +17,8 @@ const openai = new OpenAIApi(configuration);
 
 const response = async ()=> {
     const result = await openai.createCompletion({
-      model: "ada:ft-personal-2023-04-08-10-41-54",
-      prompt: "University of Maryland\n\n###\n\n",
+      model: "ada:ft-personal-2023-04-08-22-14-08",
+      prompt: "University of Maryland ->",
       temperature: 0,
       max_tokens: 20,
       top_p: 1,
@@ -30,7 +30,9 @@ const response = async ()=> {
 
 app.get('/', async (req, res) => {
     const result = await response();
-    console.log(result);
+    let processed = result.replace(/#|!/g, "")
+    console.log(processed)
+    
   res.json(result);
 })
 

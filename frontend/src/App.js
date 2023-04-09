@@ -9,7 +9,7 @@ import Details from "./Pages/Details";
 function App() {
   const [result, setResult] = useState("");
 
-  /*
+  
   useEffect(() => {
     const myfunc = async () => {
       const test = await axios.get("http://localhost:2000/");
@@ -17,7 +17,7 @@ function App() {
     };
 
     myfunc();
-  }, []);*/
+  }, []);
 
   return (
     <div className="App">

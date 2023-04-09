@@ -2,12 +2,12 @@ counter = 0
 with open("colleges.txt", "r") as file:
     for line in file:
         if counter % 20 == 0:
-            print(f"{{\"prompt\": \"{line[:-6]}  -> \", \"completion\":\" Yes,Credit,Education###\"}}")
+            print(f"{{\"prompt\": \"{line[:-6]} \", \"completion\": \"!Yes,Credit,Education!###\"}}")
         counter += 1
 
 with open("states.txt") as file1:
     for line in file1:
-        print(f"{{\"prompt\": \"{line.rstrip()} \", \"completion\":\" Yes,Deduction,Paid Taxes###\"}}")
+        print(f"{{\"prompt\": \"{line.rstrip()} \", \"completion\": \"!Yes,Deduction,Taxes!###\"}}")
 
 test = """
 Amazon
@@ -147,7 +147,7 @@ Hotwire
 """
 
 for i, line in enumerate(test.split("\n")):
-        print(f'{{"prompt": "{line}", "completion": "No###"}}')
+        print(f'{{"prompt": "{line}", "completion": "!No!###"}}')
 
 test2 = """
 McDonald's
@@ -253,7 +253,7 @@ Bojangles
 """
 
 for i, line in enumerate(test2.split("\n")):
-        print(f'{{"prompt": "{line}", "completion": "No###"}}')
+        print(f'{{"prompt": "{line}", "completion": "!No!###"}}')
 
 online = """
 PayPal
@@ -269,7 +269,7 @@ TransferWise
 """
 
 for i, line in enumerate(online.split("\n")):
-        print(f'{{"prompt": "{line}", "completion": "No###"}}')
+        print(f'{{"prompt": "{line}", "completion": "!No!###"}}')
 
 test3 = """
 Disney
@@ -375,7 +375,7 @@ The Upright Citizens Brigade Theatre
 """
 
 for i, line in enumerate(test3.split("\n")):
-        print(f'{{"prompt": "{line}", "completion": "No###"}}')
+        print(f'{{"prompt": "{line}", "completion": "!No!###"}}')
 
 banks = """
 ABN Amro
@@ -481,7 +481,7 @@ Qingdao Rural Commercial Bank
 """
 
 for i, line in enumerate(banks.split("\n")):
-        print(f'{{"prompt": "{line} Mortgage Interest", "completion": " Yes,Deduction,MInterest###"}}')
+        print(f'{{"prompt": "{line} Mortgage Interest", "completion": "!Yes,Deduction,MInterest!###"}}')
 
 drugs = """
 Lipitor
@@ -587,7 +587,7 @@ Exelon
 """
 
 for i, line in enumerate(drugs.split("\n")):
-        print(f'{{"prompt": "{line}", "completion": " Yes,Deduction,Medical###"}}')
+        print(f'{{"prompt": "{line}", "completion": "!Yes,Deduction,Medical!###"}}')
 
 hospitals = """
 Johns Hopkins Hospital
@@ -687,7 +687,7 @@ Memorial
 """
 
 for i, line in enumerate(hospitals.split("\n")):
-        print(f'{{"prompt": "{line}", "completion": " Yes,Deduction,Medical###"}}')
+        print(f'{{"prompt": "{line}", "completion": "!Yes,Deduction,Medical!###"}}')
 
 charities = """
 American Red Cross
@@ -793,4 +793,4 @@ The Epilepsy Foundation.
 """
 
 for i, line in enumerate(charities.split("\n")):
-        print(f'{{"prompt": "{line}", "completion": " Yes,Deduction,Donation###"}}')
+        print(f'{{"prompt": "{line}", "completion": "!Yes,Deduction,Donation!###"}}')
