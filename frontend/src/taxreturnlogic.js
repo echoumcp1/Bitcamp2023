@@ -117,6 +117,76 @@ export function calculateDependentCredits(filing_status, income, dependants, cur
     }
 }
 
+/* figure out tax bracket based off filing_status and income */
+export function checkTaxBracket(filing_status, income) {
+    if (filing_status === "Single") {
+        if(income < singleTaxBracket[0][1]) {
+            return singleTaxBracket[0][2]
+        } else if(income < singleTaxBracket[1][1]) {
+            return singleTaxBracket[1][2]
+        } else if(income < singleTaxBracket[2][1]) {
+            return singleTaxBracket[2][2]
+        } else if(income < singleTaxBracket[3][1]) {
+            return singleTaxBracket[3][2]
+        } else if(income < singleTaxBracket[4][1]) {
+            return singleTaxBracket[4][2]
+        } else if(income < singleTaxBracket[5][1]) {
+            return singleTaxBracket[5][2]
+        } else {
+            return singleTaxBracket[6]
+        }
+    } else if (filing_status === "Head of Household") {
+        if(income < headOfHouseHoldTaxBracket[0][1]) {
+            return headOfHouseHoldTaxBracket[0][2]
+        } else if(income < headOfHouseHoldTaxBracket[1][1]) {
+            return headOfHouseHoldTaxBracket[1][2]
+        } else if(income < headOfHouseHoldTaxBracket[2][1]) {
+            return headOfHouseHoldTaxBracket[2][2]
+        } else if(income < headOfHouseHoldTaxBracket[3][1]) {
+            return headOfHouseHoldTaxBracket[3][2]
+        } else if(income < headOfHouseHoldTaxBracket[4][1]) {
+            return headOfHouseHoldTaxBracket[4][2]
+        } else if(income < headOfHouseHoldTaxBracket[5][1]) {
+            return headOfHouseHoldTaxBracket[5][2]
+        } else {
+            return headOfHouseHoldTaxBracket[6]
+        }
+    } else if (filing_status === "Married, filing seperately") {
+        if(income < marriedSeperateTaxBracket[0][1]) {
+            return marriedSeperateTaxBracket[0][2]
+        } else if(income < marriedSeperateTaxBracket[1][1]) {
+            return marriedSeperateTaxBracket[1][2]
+        } else if(income < marriedSeperateTaxBracket[2][1]) {
+            return marriedSeperateTaxBracket[2][2]
+        } else if(income < marriedSeperateTaxBracket[3][1]) {
+            return marriedSeperateTaxBracket[3][2]
+        } else if(income < marriedSeperateTaxBracket[4][1]) {
+            return marriedSeperateTaxBracket[4][2]
+        } else if(income < marriedSeperateTaxBracket[5][1]) {
+            return marriedSeperateTaxBracket[5][2]
+        } else {
+            return marriedSeperateTaxBracket[6]
+        }
+    } else {
+        if(income < marriedJointTaxBracket[0][1]) {
+            return marriedJointTaxBracket[0][2]
+        } else if(income < marriedJointTaxBracket[1][1]) {
+            return marriedJointTaxBracket[1][2]
+        } else if(income < marriedJointTaxBracket[2][1]) {
+            return marriedJointTaxBracket[2][2]
+        } else if(income < marriedJointTaxBracket[3][1]) {
+            return marriedJointTaxBracket[3][2]
+        } else if(income < marriedJointTaxBracket[4][1]) {
+            return marriedJointTaxBracket[4][2]
+        } else if(income < marriedJointTaxBracket[5][1]) {
+            return marriedJointTaxBracket[5][2]
+        } else {
+            return marriedJointTaxBracket[6]
+        }
+    }
+
+}
+
 
 
 
