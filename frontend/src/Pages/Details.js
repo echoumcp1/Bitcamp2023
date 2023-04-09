@@ -60,7 +60,7 @@ const Details = () => {
   const parsedData = Papa.parse(csvData).data;
 
   const [taxReturn, setTaxReturn] = useState({
-    totalIncome: income,
+    totalIncome: income * (witholding/100),
     totalDeductions: 0,
     totalDonationDeductions: 0,
     totalCredits: 0,
@@ -93,10 +93,10 @@ const Details = () => {
 
   /* check tax bracket, this should return the tax rate*/
   /* checkTaxBracket returns tax rate */
-  let taxRate = checkTaxBracket(status, taxReturn.income);
+  let taxRate = checkTaxBracket(status, income);
 
   /* tax liability after taking standard deduction */
-  let taxLiability = taxableIncome * taxRate;
+  let standardTaxLiability = taxableIncome * taxRate;
 
   /* should also compute the credits on the tax liability */
 
@@ -128,6 +128,15 @@ const Details = () => {
         calculate(completePayment.toString());
         //console.log(`total Credits ${taxReturn.totalCredits}`);
       }
+      //TO-DO: Calculate the tax liability (subtract deductions -> find tax -> minus credits)
+      const taxableIncome = taxReturn.totalIncome - taxReturn.totalDeductions;
+      const taxRate = checkTaxBracket(status, taxableIncome);
+      const preCreditTaxLiability = taxableIncome * taxRate;
+      const taxLiability = preCreditTaxLiability - taxReturn.totalCredits;
+      if (dependants > 0) {
+        //calculateDependentCredits(status, income, dependants, taxLiability);
+      }
+      setTaxReturn((oldTaxReturn) => {return {...oldTaxReturn, taxLiability: taxLiability}})
     };
 
     processResults();
@@ -143,6 +152,7 @@ const Details = () => {
     //[isEligble,deduction/credit,category]
     const res = text.split(",");
     if (res[0] === Eligible.Yes) {
+      let amount = res[3];
       if (res[1] === Type.Credit) {
         if (res[2] === Category.Education) {
           //console.log(taxReturn.totalCredits)
@@ -150,7 +160,7 @@ const Details = () => {
             taxReturn.totalCredits +
             calculateCollegeCredit(
               status,
-              income,
+              taxReturn.totalIncome,
               taxReturn.taxLiability,
               school
             );
@@ -176,27 +186,26 @@ const Details = () => {
             return { ...oldTaxReturn, totalCredits: newCredit };
           });
         }
-        if (dependants > 0) {
-          calculateDependentCredits();
-        }
       } else if (res[1] === Type.Deduction) {
         switch (res[2]) {
           case Category.Medical:
             newDeduction =
               taxReturn.totalDeductions +
-              calculateMedicalDeductions(income, medical);
+              calculateMedicalDeductions(taxReturn.totalIncome, medical);
             break;
           case Category.Donation:
-            newDeduction =
-              taxReturn.totalDeductions + calculateDonationDeductions();
+  
+              let currDonationDeduction = calculateDonationDeductions(taxReturn.totalIncome, taxReturn.totalDonationDeductions, amount);
+              newDeduction = taxReturn.totalDeductions + currDonationDeduction
+            setTaxReturn((oldTaxReturn) => {return {...oldTaxReturn, totalDonationDeductions: oldTaxReturn.totalDonationDeductions+currDonationDeduction}})
             break;
           case Category.Taxes:
             newDeduction =
-              taxReturn.totalDeductions + calculateTaxDeductions(income);
+              taxReturn.totalDeductions + calculateTaxDeductions(status, amount);
             break;
           case Category.MInterest:
             newDeduction =
-              taxReturn.totalDeductions + calculateMortgageDeduction();
+              taxReturn.totalDeductions + calculateMortgageDeduction(amount);
             break;
           default:
             return ["invalid deduction detected"];

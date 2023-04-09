@@ -71,19 +71,18 @@ export function calculateCollegeCredit(filing_status, income, currTaxLiability, 
 // come back to kind of confusing, has something to do with mortgage amount
 export function calculateMortgageDeduction (amount) {
     return amount
-
 }
 
 // take the medical expenses out of pocket. AGI is the total income - deductions
 // the total amount of deductions is the minimum of (.075 * income, paid out of pocket)
-export function calculateMedicalDeductions (agi, medicalPaidOutOfPocket) {
-    return Math.min((.075 * agi), medicalPaidOutOfPocket) 
+export function calculateMedicalDeductions (income, medicalPaidOutOfPocket) {
+    return Math.min((.075 * income), medicalPaidOutOfPocket) 
 }
 
 // thersehold is at 60% AGI for deductions 
-export function calculateDonationDeductions (agi, totalDonationDeductions, amount) {
-    if (totalDonationDeductions < (.6 * agi)) {
-        return Math.min(amount, (.6 * agi) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
+export function calculateDonationDeductions (income, totalDonationDeductions, amount) {
+    if (totalDonationDeductions < (.6 * income)) {
+        return Math.min(amount, (.6 * income) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
     } else return 0
 }
 
@@ -96,7 +95,7 @@ export function calculateTaxDeductions (filing_status, stateTaxPaid, currTaxLiab
         total = Math.min(10000, stateTaxPaid);
     }
     
-    return currTaxLiability - stateTaxPaid;
+    return total;
 }
 
 export function calculateDependentCredits(filing_status, income, dependants, currTaxLiability) {
