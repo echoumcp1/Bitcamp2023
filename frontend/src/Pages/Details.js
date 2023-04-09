@@ -72,12 +72,16 @@ const Details = () => {
   const [doneParsing, setDoneParsing] = useState(false);
 
   const [taxReturn, setTaxReturn] = useState({
-    totalIncome: income * (witholding / 100),
+    totalIncome: income * (1 - witholding / 100),
     totalDeductions: 0,
     totalDonationDeductions: 0,
     totalCredits: 0,
     taxLiability: 0,
   });
+
+  useEffect(() => {
+    console.log(`Actual tax return: ${JSON.stringify(taxReturn)}`);
+  }, [taxReturn]);
 
   /* this section below calculates the tax liability if the person were to take a
     standard deduction based instead of itemized, I have not fully tested! */
@@ -122,6 +126,7 @@ const Details = () => {
   /* this will calculate every single payment and determine the final amount */
   useEffect(() => {
     const processResults = async () => {
+      let collegePayments = [];
       console.log("Hello");
       for (let [i, payment] of parsedData.entries()) {
         let payee = payment[0]; //the payee for each payment, need to send to GPT for them to classify
@@ -137,16 +142,38 @@ const Details = () => {
         console.log(`newData: ${newData}`);
         setCompleteData(newData);
         //console.log(completePayment.toString());
-        calculate(completePayment.toString());
+        calculate(completePayment.toString(), collegePayments);
       }
       //TO-DO: Calculate the tax liability (subtract deductions -> find tax -> minus credits)
       const taxableIncome = taxReturn.totalIncome - taxReturn.totalDeductions;
       const taxRate = checkTaxBracket(status, taxableIncome);
       const preCreditTaxLiability = taxableIncome * taxRate;
-      const taxLiability = preCreditTaxLiability - taxReturn.totalCredits;
+      let taxLiability = preCreditTaxLiability - taxReturn.totalCredits;
       if (dependants > 0) {
         //calculateDependentCredits(status, income, dependants, taxLiability);
       }
+
+      let newCredits = 0;
+      console.log(`College Payments: ${collegePayments}`);
+      collegePayments.forEach((amount) => {
+        newCredits = calculateCollegeCredit(
+          status,
+          taxReturn.totalIncome,
+          taxLiability,
+          school,
+          amount
+        );
+        console.log(`NewCredit: ${newCredits}`);
+        console.log(`existing TaxReturn: ${JSON.stringify(taxReturn)}`);
+        taxLiability = taxLiability - newCredits;
+        setTaxReturn((oldTaxReturn) => {
+          return {
+            ...oldTaxReturn,
+            totalCredits: oldTaxReturn.totalCredits + newCredits,
+          };
+        });
+      });
+
       setTaxReturn((oldTaxReturn) => {
         return { ...oldTaxReturn, taxLiability: taxLiability };
       });
@@ -188,7 +215,7 @@ const Details = () => {
   //setTaxReturn({...taxReturn, totalDeductions: 5000}) // create new property
 
   /* calculate the tax benefit for each payment*/
-  function calculate(text) {
+  function calculate(text, collegePayments) {
     let newDeduction = 0;
     let newCredit = 0;
     //Array with the following properties
@@ -199,14 +226,7 @@ const Details = () => {
       if (res[1] === Type.Credit) {
         if (res[2] === Category.Education) {
           //console.log(taxReturn.totalCredits)
-          newCredit =
-            taxReturn.totalCredits +
-            calculateCollegeCredit(
-              status,
-              taxReturn.totalIncome,
-              taxReturn.taxLiability,
-              school
-            );
+          collegePayments.push(amount);
 
           //console.log(`taxReturn.totalCredits: ${taxReturn.totalCredits}`);
           /*console.log(
@@ -217,17 +237,17 @@ const Details = () => {
               school
             )}`
           );*/
-          console.log(`NewCredits: ${newCredit}`);
+          //console.log(`NewCredits: ${newCredit}`);
           //console.log(school)
-          const newTaxReturn = { ...taxReturn, totalCredits: newCredit };
+          //const newTaxReturn = { ...taxReturn, totalCredits: newCredit };
           //console.log(`oldTaxReturn: ${JSON.stringify(taxReturn)}`);
           //console.log(`newTaxReturn: ${JSON.stringify(newTaxReturn)}`);
-          setTaxReturn((oldTaxReturn) => {
-            /*console.log(
+          /*setTaxReturn((oldTaxReturn) => {
+            console.log(
               JSON.stringify({ ...oldTaxReturn, totalCredits: newCredit })
-            );*/
+            );
             return { ...oldTaxReturn, totalCredits: newCredit };
-          });
+          });*/
         }
       } else if (res[1] === Type.Deduction) {
         switch (res[2]) {

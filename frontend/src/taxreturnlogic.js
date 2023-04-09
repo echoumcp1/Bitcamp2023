@@ -48,20 +48,23 @@ const marriedSeperateTaxBracket =
     Student && income < 80000 && filing status is not married filed jointly:
     Income < 160000 && married filed jointly:
 */
-export function calculateCollegeCredit(filing_status, income, currTaxLiability, isStudent) {
+export function calculateCollegeCredit(filing_status, income, currTaxLiability, isStudent, amount) {
     if(isStudent) {
+        let minimum = Math.min(amount, 2500);
         /* Student && income < 80000 && filing status is not married filed jointly: */
         if ((income < 80000 && filing_status !== "Married filing jointly") ||
             (income < 160000 && filing_status === "Married filing jointly")) {
-        console.log(`${filing_status}, ${income}, ${currTaxLiability}, ${isStudent}`);
+            //console.log(`${filing_status}, ${income}, ${currTaxLiability}, ${isStudent}`);
             if(currTaxLiability < 0) {
-                return 1000
+                return Math.min(minimum, 1000)
             } else if (currTaxLiability <= 2500) {
-                let difference = 2500 - currTaxLiability 
-                let calculation = 0 - (.4 * difference)
-                return calculation
+                let excess = currTaxLiability - minimum;
+                let percentabovethreshold = .4 *  excess;
+                let benefitToZero = minimum - excess;
+                let credit = percentabovethreshold + benefitToZero;
+                return credit;
             } else {
-                return currTaxLiability - 2500
+                return minimum;
             }
     }
     }
