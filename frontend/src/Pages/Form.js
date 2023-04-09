@@ -161,6 +161,7 @@ const Form = () => {
               value={dependants}
               onChange={(e) => setDependants(e.target.value)}
               className="smallerText"
+              min="0"
             ></input>
           </label>
           <br />

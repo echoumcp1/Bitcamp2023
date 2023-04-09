@@ -4,6 +4,7 @@ import Table from "react-bootstrap/Table";
 import { CgProfile } from "react-icons/cg";
 import { Bar, Pie } from "react-chartjs-2";
 import { Chart as ChartJS, registerables } from "chart.js";
+import detective from "../detective.png";
 
 import {
   calculateCollegeCredit,
@@ -204,6 +205,7 @@ const Details = () => {
 
       let newBarData = [0, 0, 0, 0, 0];
       let newPieData = [0, 0, 0];
+      console.log(`completeData: ${JSON.stringify(completeData)}`);
       completeData.forEach((row) => {
         for (let [i, category] of [
           "Education",
@@ -322,7 +324,7 @@ const Details = () => {
   return (
     <div className="Details">
       <Navbar />
-      {doneParsing && (
+      {doneParsing ? (
         <div className="dashboard">
           <div className="cardProfile">
             <div className="profileWrapper">
@@ -332,15 +334,15 @@ const Details = () => {
               <table>
                 <tr>
                   <td>Gross Annual Income: ${income}</td>
-                  <td>School: {school}</td>
+                  <td>In School?: {school ? "Yes" : "No"}</td>
                 </tr>
                 <tr>
-                  <td>Dependants: {dependants}</td>
-                  <td>Witholding: {witholding}</td>
+                  <td>Number of Dependants: {dependants}</td>
+                  <td>Witholding Percentage: {witholding}</td>
                 </tr>
                 <tr>
-                  <td>Status: {status}</td>
-                  <td>Medical: {medical}</td>
+                  <td>Filing Status: {status}</td>
+                  <td>Out-of-pocket Medical Expenditures: {medical}</td>
                 </tr>
               </table>
             </div>
@@ -438,6 +440,17 @@ const Details = () => {
                   })}
               </tbody>
             </Table>
+          </div>
+        </div>
+      ) : (
+        <div className="loadingPage">
+          <div>
+            Please wait a moment...
+            <br />
+            <br />
+            <img id="detective" src={detective} alt="Logo" />
+            <br />
+            <br />I am looking at your taxes!
           </div>
         </div>
       )}
