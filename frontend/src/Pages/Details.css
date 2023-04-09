@@ -81,3 +81,7 @@
     box-shadow: 0 0px 3px rgba(0,0,0, 0.1);
     border-radius: 10px;
 }
+
+canvas {
+    max-height: 300px;
+}

@@ -131,12 +131,14 @@ export function calculateDependentCredits(filing_status, income, dependants, cur
 
 /* figure out tax bracket based off filing_status and income */
 export function checkTaxBracket(filing_status, income) {
-    if (filing_status === "Single") {
+    if (filing_status === "single") {
         if(income < singleTaxBracket[0][1]) {
             return singleTaxBracket[0][2]
         } else if(income < singleTaxBracket[1][1]) {
+            console.log("single tax bracket:" + singleTaxBracket[1][1])
             return singleTaxBracket[1][2]
         } else if(income < singleTaxBracket[2][1]) {
+            console.log("single tax bracket:" + singleTaxBracket[2][1])
             return singleTaxBracket[2][2]
         } else if(income < singleTaxBracket[3][1]) {
             return singleTaxBracket[3][2]

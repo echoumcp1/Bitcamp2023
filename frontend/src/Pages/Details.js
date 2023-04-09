@@ -71,12 +71,20 @@ const Details = () => {
 
   const [doneParsing, setDoneParsing] = useState(false);
 
+  let taxesPaid = income * (witholding / 100);
+  let taxRateOriginal = checkTaxBracket(status, income);
+  console.log("status" + status);
+
+  console.log(taxRateOriginal);
+  let taxesOwed = taxRateOriginal * income - taxesPaid;
+  console.log("hai");
+
   const [taxReturn, setTaxReturn] = useState({
     totalIncome: income * (1 - witholding / 100),
     totalDeductions: 0,
     totalDonationDeductions: 0,
     totalCredits: 0,
-    taxLiability: 0,
+    taxLiability: taxesOwed,
   });
 
   useEffect(() => {
@@ -145,10 +153,22 @@ const Details = () => {
         calculate(completePayment.toString(), collegePayments);
       }
       //TO-DO: Calculate the tax liability (subtract deductions -> find tax -> minus credits)
+      if (taxReturn.taxLiability > 0) {
+        const taxableIncome = taxReturn.totalIncome - taxReturn.totalDeductions;
+        console.log(`Taxable Income: ${taxableIncome}`);
+        const taxRate = checkTaxBracket(status, taxableIncome);
+        console.log(`Tax Rate: ${taxRate}`);
+        const preCreditTaxLiability = taxableIncome * taxRate;
+        console.log(`Pre Credit Tax Liability: ${preCreditTaxLiability}`);
+      }
       const taxableIncome = taxReturn.totalIncome - taxReturn.totalDeductions;
+      console.log(`Taxable Income: ${taxableIncome}`);
       const taxRate = checkTaxBracket(status, taxableIncome);
+      console.log(`Tax Rate: ${taxRate}`);
       const preCreditTaxLiability = taxableIncome * taxRate;
+      console.log(`Pre Credit Tax Liability: ${preCreditTaxLiability}`);
       let taxLiability = preCreditTaxLiability - taxReturn.totalCredits;
+      console.log(`taxLiability: ${taxLiability}`);
       if (dependants > 0) {
         //calculateDependentCredits(status, income, dependants, taxLiability);
       }
@@ -166,6 +186,9 @@ const Details = () => {
         console.log(`NewCredit: ${newCredits}`);
         console.log(`existing TaxReturn: ${JSON.stringify(taxReturn)}`);
         taxLiability = taxLiability - newCredits;
+        console.log(
+          `new taxLiability after subtracting college: ${taxLiability}`
+        );
         setTaxReturn((oldTaxReturn) => {
           return {
             ...oldTaxReturn,
@@ -249,7 +272,7 @@ const Details = () => {
             return { ...oldTaxReturn, totalCredits: newCredit };
           });*/
         }
-      } else if (res[1] === Type.Deduction) {
+      } else if (res[1] === Type.Deduction && taxReturn.taxLiability > 0) {
         switch (res[2]) {
           case Category.Medical:
             newDeduction =
@@ -331,39 +354,37 @@ const Details = () => {
             <h3>{taxReturn.taxLiability}</h3>
           </div>
           <div className="cardBar">
-            <div>
-              <Bar
-                data={{
-                  labels: [
-                    "College",
-                    "Mortgage Interest",
-                    "Donations",
-                    "Taxes",
-                    "Medical",
-                  ],
-                  datasets: [
-                    {
-                      label: "Distribution of Credits/Deductions",
-                      backgroundColor: "rgba(75,192,192,1)",
-                      borderColor: "rgba(0,0,0,1)",
-                      borderWidth: 2,
-                      data: barData,
-                    },
-                  ],
-                }}
-                options={{
-                  title: {
-                    display: true,
-                    text: "Average Rainfall per month",
-                    fontSize: 20,
+            <Bar
+              data={{
+                labels: [
+                  "College",
+                  "Mortgage Interest",
+                  "Donations",
+                  "Taxes",
+                  "Medical",
+                ],
+                datasets: [
+                  {
+                    label: "Distribution of Credits/Deductions",
+                    backgroundColor: "rgba(75,192,192,1)",
+                    borderColor: "rgba(0,0,0,1)",
+                    borderWidth: 2,
+                    data: barData,
                   },
-                  legend: {
-                    display: true,
-                    position: "right",
-                  },
-                }}
-              />
-            </div>
+                ],
+              }}
+              options={{
+                title: {
+                  display: true,
+                  text: "Distribution of Credits/Deductions",
+                  fontSize: 20,
+                },
+                legend: {
+                  display: true,
+                  position: "right",
+                },
+              }}
+            />
           </div>
 
           <div className="cardPie">
@@ -391,22 +412,6 @@ const Details = () => {
                 }}
               />
             </div>
-          </div>
-
-          <div className="cardItem">
-            <p>BarData {barData}</p>
-          </div>
-          <div className="cardItem">
-            <p>Dependants {dependants}</p>
-          </div>
-          <div className="cardItem">
-            <p>Witholding {witholding}</p>
-          </div>
-          <div className="cardItem">
-            <p>Status {status}</p>
-          </div>
-          <div className="cardItem">
-            <p>Medical {medical}</p>
           </div>
 
           <div className="cardTable">
