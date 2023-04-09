@@ -8,7 +8,6 @@ import Details from "./Pages/Details";
 
 function App() {
   const [result, setResult] = useState("");
-
   /*
   useEffect(() => {
     const myfunc = async () => {

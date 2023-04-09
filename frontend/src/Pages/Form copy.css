@@ -7,10 +7,10 @@
   }
   
 .background {
-    position: relative;
     text-align: center;
     background-color: rgb(250, 244, 236);
-    font-size: 40px;
+    font-size: 50px;
+    line-height: 8px;
     padding: 20px;
     width: 70vh;
     height: 60vh;
@@ -47,23 +47,21 @@
  #submit{
     border-radius: 7px;
     border: none;
-    padding: 10px;
+    padding: 7px;
     font-size: 17px;
     background-color: white;
-    transform: translateY(-7px);
+    transform: translateY(-4px);
   }
   
   #submit:active {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
   
   .front {
     background-color: rgb(100, 100, 100);
-    font-size: 20px;
     border-radius: 7px;
     border: none;
     box-shadow: 0 2px 6px rgba(0,0,0, 0.4);
-    margin: 10px;
   }
   
   #school div {
@@ -82,51 +80,24 @@
     justify-content: space-evenly;
   }
 
-  .moveButton {
-    border-radius: 20px;
+  .nextButton {
+    border-radius: 15px;
     height: 50px;
     width: 50px;
     border: none;
+    padding: 7px;
+    font-size: 17px;
     background-color: white;
-    transform: translateY(-12px);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .moveButton:active {
-    transform: translateY(-8px);
-  }
-
-  .moveButton.inactive {
-    background-color: lightgray;
-    transform: translateY(-8px);
-    color: gray;
+    transform: translateY(-17px);
   }
 
   .frontControl {
     background-color: rgb(100, 100, 100);
-    border-radius: 20px;
-    font-size: 40px;
-    height: 50px;
-    width: 50px;
+    border-radius: 15px;
     border: none;
     box-shadow: 0 2px 6px rgba(0,0,0, 0.4);
-    margin: 10px;
   }
 
   .control {
-    position: absolute;
-    width: 92%;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  input[type='radio'] {
-    height: 20px;
-    width: 20px;
-    vertical-align: middle;
-    margin-right: 2px;
+    line-height: 10px
   }
