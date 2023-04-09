@@ -44,12 +44,18 @@ const marriedSeperateTaxBracket =
 ]
 
 /* gets called whenever we need to calculate the total tax credit */
+/* 
+    Student && income < 80000 && filing status is not married filed jointly:
+    Income < 160000 && married filed jointly:
+*/
 export function calculateCollegeCredit(filing_status, income, currTaxLiability, isStudent) {
     if(isStudent) {
-        if (income < 80000) {
+        /* Student && income < 80000 && filing status is not married filed jointly: */
+        if (*income < 80000 && filing status is not married filed jointly) && 
+            Income < 160000 && married filed jointly) {
         console.log(`${filing_status}, ${income}, ${currTaxLiability}, ${isStudent}`);
             if(currTaxLiability < 0) {
-                return currTaxLiability - 1000
+                return 1000
             } else if (currTaxLiability <= 2500) {
                 let difference = 2500 - currTaxLiability 
                 let calculation = 0 - (.4 * difference)
@@ -77,13 +83,21 @@ export function calculateMedicalDeductions (agi, medicalPaidOutOfPocket, currTax
 // thersehold is at 60% AGI for deductions 
 export function calculateDonationDeductions (agi, totalDonationDeductions, amount) {
     if (totalDonationDeductions < (.6 * agi)) {
-        let deduction = Math.min(amount, (.6 * agi) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
-    }
+        return deduction = Math.min(amount, (.6 * agi) - totalDonationDeductions) // deduction is either the amount or the amount left in thereshold
+    } else return 0
 
 }
 
-export function calculateTaxDeductions (agi, totalDonationDeductions, amount) {
-
+export function calculateTaxDeductions (filing_status, stateTaxPaid, currTaxLiability) {
+    var total;
+    if (filing_status === "Married filing separate") {
+        total = Math.min(5000, stateTaxPaid);
+    }
+    else {
+        total = Math.min(10000, stateTaxPaid);
+    }
+    
+    return currTaxLiability - stateTaxPaid;
 }
 
 export function calculateDependentCredits(filing_status, income, dependants, currTaxLiability) {
